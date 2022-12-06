@@ -174,7 +174,7 @@ const Header = () => {
                 aria-expanded='false'
               >
                 <span className='flag-icon'>
-                  <img src='/images/flags/english.png' alt='eng' />
+                  <img src='/images/flags/english.svg' alt='eng' />
                 </span>
                 <span className='language-name'>English</span>
               </button>
@@ -182,7 +182,7 @@ const Header = () => {
                 <li>
                   <Link className='dropdown-item' href='/'>
                     <span className='flag-icon'>
-                      <img src='/images/flags/english.png' alt='eng' />
+                      <img src='/images/flags/english.svg' alt='eng' />
                     </span>
                     <span className='language-name'>English</span>
                   </Link>
@@ -190,7 +190,7 @@ const Header = () => {
                 <li>
                   <Link className='dropdown-item' href='/'>
                     <span className='flag-icon'>
-                      <img src='/images/flags/arabic.png' alt='eng' />
+                      <img src='/images/flags/arabic.svg' alt='ara' />
                     </span>
                     <span className='language-name'>Arabic</span>
                   </Link>
@@ -198,7 +198,7 @@ const Header = () => {
                 <li>
                   <Link className='dropdown-item' href='/'>
                     <span className='flag-icon'>
-                      <img src='/images/flags/french.png' alt='eng' />
+                      <img src='/images/flags/french.svg' alt='fr' />
                     </span>
                     <span className='language-name'>French</span>
                   </Link>
@@ -206,7 +206,7 @@ const Header = () => {
                 <li>
                   <Link className='dropdown-item' href='/'>
                     <span className='flag-icon'>
-                      <img src='/images/flags/germany.png' alt='eng' />
+                      <img src='/images/flags/germany.svg' alt='ge' />
                     </span>
                     <span className='language-name'>German</span>
                   </Link>
@@ -214,7 +214,7 @@ const Header = () => {
                 <li>
                   <Link className='dropdown-item' href='/'>
                     <span className='flag-icon'>
-                      <img src='/images/flags/portuguese.png' alt='eng' />
+                      <img src='/images/flags/portuguese.svg' alt='port' />
                     </span>
                     <span className='language-name'>Portuguese</span>
                   </Link>
@@ -222,7 +222,7 @@ const Header = () => {
                 <li>
                   <Link className='dropdown-item' href='/'>
                     <span className='flag-icon'>
-                      <img src='/images/flags/spain.png' alt='eng' />
+                      <img src='/images/flags/spain.svg' alt='sp' />
                     </span>
                     <span className='language-name'>Spanish</span>
                   </Link>
