@@ -1,24 +1,30 @@
-import React from 'react';
+import * as React from 'react';
 
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import HeroSectionSM from '@/components/hero-section-sm/HeroSectionSM';
+import Layout from '@/components/layout/Layout';
 import NewsDetailSection4 from '@/components/news-detail-section/NewsDetailSection4';
 import PageShape from '@/components/page-shape/PageShape';
+import Seo from '@/components/Seo';
 
-const NewDetailPage4 = () => {
+export default function NewDetailPage4() {
   return (
-    <div className='news-detail-page'>
-      <PageShape />
-      <Header />
-      <HeroSectionSM
-        image='/images/header-bg/news-bg-4.png'
-        name='Trading under AfCFTA to progress on agreed 87.7% tariff lines'
-      />
-      <NewsDetailSection4 />
-      <Footer />
-    </div>
-  );
-};
+    <Layout>
+      <Seo templateTitle='News-detail-4' />
 
-export default NewDetailPage4;
+      <main>
+        <div className='news-detail-page'>
+          <PageShape />
+          <Header />
+          <HeroSectionSM
+            image='/images/header-bg/news-bg-4.png'
+            name='Trading under AfCFTA to progress on agreed 87.7% tariff lines'
+          />
+          <NewsDetailSection4 />
+          <Footer />
+        </div>
+      </main>
+    </Layout>
+  );
+}

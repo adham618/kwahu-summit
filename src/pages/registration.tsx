@@ -1,25 +1,31 @@
-import React from 'react';
+import * as React from 'react';
 
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import HeroSectionSM from '@/components/hero-section-sm/HeroSectionSM';
+import Layout from '@/components/layout/Layout';
 import PageShape from '@/components/page-shape/PageShape';
 import RegistrationSection from '@/components/registration-section/RegistrationSection';
+import Seo from '@/components/Seo';
 
-const RegistrationPage = () => {
+export default function RegistrationPage() {
   return (
-    <div className='registration-page'>
-      <PageShape />
-      <Header />
-      <HeroSectionSM
-        image='/images/header-bg/registration-bg.png'
-        name='REGISTRATION'
-        desc='Summit online registration'
-      />
-      <RegistrationSection />
-      <Footer />
-    </div>
-  );
-};
+    <Layout>
+      <Seo templateTitle='Registration' />
 
-export default RegistrationPage;
+      <main>
+        <div className='registration-page'>
+          <PageShape />
+          <Header />
+          <HeroSectionSM
+            image='/images/header-bg/registration-bg.png'
+            name='REGISTRATION'
+            desc='Summit online registration'
+          />
+          <RegistrationSection />
+          <Footer />
+        </div>
+      </main>
+    </Layout>
+  );
+}

@@ -11,14 +11,16 @@ export default function NotFoundPage() {
       <Seo templateTitle='Not Found' />
 
       <main>
-        <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
+        <section className='tw-bg-white'>
+          <div className='layout tw-flex tw-min-h-screen tw-flex-col tw-items-center tw-justify-center tw-text-center tw-text-black'>
             <RiAlarmWarningFill
               size={60}
-              className='drop-shadow-glow animate-flicker text-red-500'
+              className='tw-drop-shadow-glow tw-animate-flicker tw-text-red-500'
             />
-            <h1 className='mt-8 text-4xl md:text-6xl'>Page Not Found</h1>
-            <Link className='mt-4 md:text-lg' href='/'>
+            <h1 className='tw-mt-8 tw-text-4xl md:tw-text-6xl'>
+              Page Not Found
+            </h1>
+            <Link className='tw-mt-4 md:tw-text-lg' href='/'>
               Back to Home
             </Link>
           </div>
