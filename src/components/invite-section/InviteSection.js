@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 import CardImgText from '../card-img-text/CardImgText';
@@ -68,7 +69,7 @@ const invite_list = [
 
 const InviteSection = (props) => {
   return (
-    <div className='invite-section p-4'>
+    <div className='invite-section p-4 tw-relative'>
       <SectionHeader title='Invited Heads of State' />
       <div className='cards'>
         <div className='container-fluid'>
@@ -94,6 +95,11 @@ const InviteSection = (props) => {
           </div>
         </div>
       </div>
+      <img
+        className='tw-absolute tw-left-0 tw-top-[-1px] -tw-z-10'
+        src='/images/CircleDown.svg'
+        alt='vector'
+      />
     </div>
   );
 };

@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 import CardIconText from '../card-icon-text/CardIconText';
 import SectionHeader from '../section-header/SectionHeader';
 const WhoAttending = () => {
   return (
-    <div className='who-attending-section p-4'>
+    <div className='who-attending-section p-4 tw-relative'>
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-lg-5 offset-lg-1 col-md-6'>
@@ -58,6 +59,11 @@ const WhoAttending = () => {
           </div>
         </div>
       </div>
+      <img
+        className='tw-absolute tw-left-0 tw-bottom-0 -tw-z-10'
+        src='/images/CircleUp.svg'
+        alt='vector'
+      />
     </div>
   );
 };
