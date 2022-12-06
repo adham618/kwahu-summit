@@ -14,27 +14,33 @@ const Header = () => {
               </Link>
             </div>
             <div className='register-button'>
-              <Link
-                href='/registration'
-                className='btn btn-outline-light !tw-flex'
-              >
+              <Link href='/registration' className='btn btn-outline-light'>
                 Register
               </Link>
             </div>
           </div>
           <div className='header-right'>
             <nav className='navbar navbar-expand-lg'>
-              <div className='navbar-collapse collapse'>
+              <div className='collapse navbar-collapse'>
                 <ul className='navbar-nav'>
                   <li className='nav-item'>
-                    <Link className='nav-link active' href='/'>
+                    <Link
+                      href='/'
+                      className='nav-link active'
+                      aria-current='page'
+                    >
                       Home
                     </Link>
                   </li>
                   <li className='nav-item dropdown'>
-                    <Link className='nav-link dropdown-toggle' href='/about'>
+                    <a
+                      className='nav-link dropdown-toggle'
+                      role='button'
+                      data-bs-toggle='dropdown'
+                      aria-expanded='false'
+                    >
                       About
-                    </Link>
+                    </a>
                     <ul className='dropdown-menu'>
                       <li>
                         <Link className='dropdown-item' href='/about-summit'>
@@ -58,8 +64,8 @@ const Header = () => {
                       </li>
                       <li>
                         <Link
-                          href='/planning-committee'
                           className='dropdown-item'
+                          href='/planning-committee'
                         >
                           Planning committee
                         </Link>
@@ -67,9 +73,14 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className='nav-item dropdown'>
-                    <Link href='' className='nav-link dropdown-toggle'>
+                    <a
+                      className='nav-link dropdown-toggle'
+                      role='button'
+                      data-bs-toggle='dropdown'
+                      aria-expanded='false'
+                    >
                       Who is attending
-                    </Link>
+                    </a>
                     <ul className='dropdown-menu'>
                       <li>
                         <Link className='dropdown-item' href='/speakers'>
@@ -87,9 +98,14 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className='nav-item dropdown'>
-                    <Link className='nav-link dropdown-toggle' href='/'>
+                    <a
+                      className='nav-link dropdown-toggle'
+                      role='button'
+                      data-bs-toggle='dropdown'
+                      aria-expanded='false'
+                    >
                       Resources
-                    </Link>
+                    </a>
                     <ul className='dropdown-menu'>
                       <li>
                         <Link className='dropdown-item' href='/news'>
@@ -102,24 +118,29 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href='/agenda' className='dropdown-item'>
+                        <Link className='dropdown-item' href='/agenda'>
                           The AU Agenda 2063
                         </Link>
                       </li>
                     </ul>
                   </li>
                   <li className='nav-item dropdown'>
-                    <Link className='nav-link dropdown-toggle' href='/'>
+                    <a
+                      className='nav-link dropdown-toggle'
+                      role='button'
+                      data-bs-toggle='dropdown'
+                      aria-expanded='false'
+                    >
                       Event guide
-                    </Link>
+                    </a>
                     <ul className='dropdown-menu'>
                       <li>
-                        <Link href='/peduase' className='dropdown-item'>
+                        <Link className='dropdown-item' href='/peduase'>
                           Peduase
                         </Link>
                       </li>
                       <li>
-                        <Link href='/accra' className='dropdown-item'>
+                        <Link className='dropdown-item' href='/accra'>
                           Accra
                         </Link>
                       </li>
@@ -131,7 +152,7 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' href='/help'>
+                    <Link className='nav-link' aria-current='page' href='/help'>
                       Help
                     </Link>
                   </li>
@@ -147,7 +168,7 @@ const Header = () => {
           <div className='header-top-right d-flex align-items-center'>
             <div className='language-dropdown dropdown'>
               <button
-                className='btn btn-flat dropdown-toggle text-white'
+                className='btn text-white btn-flat dropdown-toggle'
                 type='button'
                 data-bs-toggle='dropdown'
                 aria-expanded='false'
@@ -159,7 +180,7 @@ const Header = () => {
               </button>
               <ul className='dropdown-menu'>
                 <li>
-                  <Link href='/' className='dropdown-item'>
+                  <Link className='dropdown-item' href='/'>
                     <span className='flag-icon'>
                       <img src='/images/flags/english.png' alt='eng' />
                     </span>
