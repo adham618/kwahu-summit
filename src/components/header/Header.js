@@ -14,7 +14,10 @@ const Header = () => {
               </Link>
             </div>
             <div className='register-button'>
-              <Link href='/registration' className='btn btn-outline-light'>
+              <Link
+                href='/registration'
+                className='btn btn-outline-light !tw-flex'
+              >
                 Register
               </Link>
             </div>
