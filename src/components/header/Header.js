@@ -234,16 +234,16 @@ const Header = () => {
             </div>
             <div className='social-profiles'>
               <Link href='/'>
-                <img src='/images/socials/facebook.png' alt='FacebookIcon' />
+                <img src='/images/socials/facebook.svg' alt='FacebookIcon' />
               </Link>
               <Link href='/'>
-                <img src='/images/socials/twitter.png' alt='TwitterIcon' />
+                <img src='/images/socials/twitter.svg' alt='TwitterIcon' />
               </Link>
               <Link href='/'>
-                <img src='/images/socials/linkedin.png' alt='LinkedinIcon' />
+                <img src='/images/socials/linkedin.svg' alt='LinkedinIcon' />
               </Link>
               <Link href='/'>
-                <img src='/images/socials/instagram.png' alt='InstagramIcon' />
+                <img src='/images/socials/instagram.svg' alt='InstagramIcon' />
               </Link>
             </div>
           </div>

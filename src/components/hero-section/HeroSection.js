@@ -19,82 +19,57 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const SliderData = [
+    {
+      bgImg: '/images/hero-bg/bg-1.png',
+      titleCap: 'Transforming Africa:',
+      title: 'Trough trade and impact invesment',
+      desc: 'Delivering prosperity through continental trade',
+    },
+    {
+      bgImg: '/images/hero-bg/bg-2.png',
+      titleCap: 'Transforming Africa:',
+      title: 'Trough trade and impact invesment',
+      desc: 'Delivering prosperity through continental trade',
+    },
+    {
+      bgImg: '/images/hero-bg/bg-3.png',
+      titleCap: 'AfCTFA:',
+      title: 'From ambition to action ',
+      desc: 'Energy security For industrialisation',
+    },
+  ];
   return (
     <div className='hero-section'>
       <Slider {...slider_settings}>
-        <div className='item-slider'>
-          <div className='bg-img'>
-            <img src='/images/hero-bg/bg-1.png' alt='bg-image' />
-          </div>
-          <div className='hero-content'>
-            <div className='container'>
-              <div className='content'>
-                <h3 className='titleCap'>Transforming Africa:</h3>
-                <h3 className='title'>Trough trade and impact invesment</h3>
-                <p className='desc'>
-                  Delivering prosperity through continental trade
-                </p>
-                <Link
-                  className='btn btn-register btn-outline-light !tw-flex'
-                  href='/registration'
-                >
-                  Register
-                </Link>
-                <div className='rotate-text'>
-                  <p>Who is attending ?</p>
+        {SliderData.map((item, index) => (
+          <div key={index} className='item-slider'>
+            <div className='bg-img'>
+              <img src={item.bgImg} alt='bg-image' />
+            </div>
+            <div className='hero-content'>
+              <div className='container'>
+                <div className='content'>
+                  <h3 className='titleCap'>{item.titleCap}</h3>
+                  <h3 className='title'>{item.title}</h3>
+                  <p className='desc tw-flex tw-items-center'>
+                    {item.desc}
+                    <span className='tw-ml-2 tw-inline-block tw-h-0.5 tw-w-[515px] tw-bg-white'></span>
+                  </p>
+                  <Link
+                    className='btn btn-register btn-outline-light !tw-flex'
+                    href='/registration'
+                  >
+                    Register
+                  </Link>
+                  <div className='rotate-text'>
+                    <p>Who is attending ?</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className='item-slider'>
-          <div className='bg-img'>
-            <img src='/images/hero-bg/bg-2.png' alt='bg-image' />
-          </div>
-          <div className='hero-content'>
-            <div className='container'>
-              <div className='content'>
-                <h3 className='titleCap'>Transforming Africa:</h3>
-                <h3 className='title'>Trough trade and impact invesment</h3>
-                <p className='desc'>
-                  Delivering prosperity through continental trade
-                </p>
-                <Link
-                  className='btn btn-register btn-outline-light !tw-flex'
-                  href='/registration'
-                >
-                  Register
-                </Link>
-                <div className='rotate-text'>
-                  <p>Who is attending ?</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='item-slider'>
-          <div className='bg-img'>
-            <img src='/images/hero-bg/bg-3.png' alt='bg-image' />
-          </div>
-          <div className='hero-content'>
-            <div className='container'>
-              <div className='content'>
-                <h3 className='titleCap'>AfCTFA:</h3>
-                <h3 className='title'>From ambition to action </h3>
-                <p className='desc'>Energy security For industrialisation</p>
-                <Link
-                  className='btn btn-register btn-outline-light !tw-flex'
-                  href='/registration'
-                >
-                  Register
-                </Link>
-                <div className='rotate-text'>
-                  <p>Who is attending ?</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );
