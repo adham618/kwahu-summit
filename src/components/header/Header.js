@@ -176,10 +176,10 @@ const Header = () => {
                 data-bs-toggle='dropdown'
                 aria-expanded='false'
               >
-                <span className='flag-icon'>
+                <span className='flag-icon tw-flex'>
                   <img src='/images/flags/english.svg' alt='eng' />
                 </span>
-                <span className='language-name'>English</span>
+                <span className='language-name tw-font-bold'>English</span>
               </button>
               <ul className='dropdown-menu'>
                 <li>
