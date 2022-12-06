@@ -35,7 +35,7 @@ const HeroSection = () => {
                   Delivering prosperity through continental trade
                 </p>
                 <Link
-                  className='btn btn-register btn-outline-light'
+                  className='btn btn-register btn-outline-light !tw-flex'
                   href='/registration'
                 >
                   Register
@@ -60,7 +60,7 @@ const HeroSection = () => {
                   Delivering prosperity through continental trade
                 </p>
                 <Link
-                  className='btn btn-register btn-outline-light'
+                  className='btn btn-register btn-outline-light !tw-flex'
                   href='/registration'
                 >
                   Register
@@ -83,7 +83,7 @@ const HeroSection = () => {
                 <h3 className='title'>From ambition to action </h3>
                 <p className='desc'>Energy security For industrialisation</p>
                 <Link
-                  className='btn btn-register btn-outline-light'
+                  className='btn btn-register btn-outline-light !tw-flex'
                   href='/registration'
                 >
                   Register
