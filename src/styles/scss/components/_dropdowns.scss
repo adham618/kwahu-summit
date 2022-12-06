@@ -3,7 +3,7 @@
     &::after {
       @include pseudo();
       @include size(16px, 9px);
-      background-image: url('/assets/images/green-arrow-down.png');
+      background-image: url('/images/green-arrow-down.png');
       margin-left: 12px;
       border: none;
     }
