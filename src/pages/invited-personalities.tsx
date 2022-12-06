@@ -12,7 +12,7 @@ import Seo from '@/components/Seo';
 export default function InvitedPersonalitiesPage() {
   return (
     <Layout>
-      <Seo templateTitle='Invited-personalities' />
+      <Seo templateTitle='Invited personalities' />
 
       <main>
         <div className='speaker-page'>

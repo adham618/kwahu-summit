@@ -13,7 +13,7 @@ import VideoSection from '@/components/video/video-section';
 export default function AboutSummitPage() {
   return (
     <Layout>
-      <Seo templateTitle='About-summit' />
+      <Seo templateTitle='About summit' />
 
       <main>
         <div className='about-summit-page'>

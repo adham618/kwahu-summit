@@ -22,7 +22,7 @@ import Seo from '@/components/Seo';
 export default function TheAfcftaPage() {
   return (
     <Layout>
-      <Seo templateTitle='The-afcfta' />
+      <Seo templateTitle='The afcfta' />
 
       <main>
         <div className='the-afcta'>

@@ -11,7 +11,7 @@ import Seo from '@/components/Seo';
 export default function PlanningCommitteePage() {
   return (
     <Layout>
-      <Seo templateTitle='Planning-committee' />
+      <Seo templateTitle='Planning committee' />
 
       <main>
         <div className='planning-committee-page'>
