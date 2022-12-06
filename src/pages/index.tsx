@@ -27,7 +27,7 @@ export default function HomePage() {
             <VideoSection />
             <WhoAttending />
             <InviteSection hideButton={true} />
-            <NotableSection hideButton={false} />
+            <NotableSection hideButton={true} />
             <KeyTopics />
             <NewSection />
             <FAQSection />

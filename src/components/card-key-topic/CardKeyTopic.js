@@ -5,7 +5,7 @@ import React from 'react';
 const CardKeyTopic = (props) => {
   return (
     <Link className='card-key-topic' href='/'>
-      <img src={props.image} alt={props.name} />
+      <img className='tw-rounded-[10px]' src={props.image} alt={props.name} />
       <span className='title'>{props.title}</span>
     </Link>
   );

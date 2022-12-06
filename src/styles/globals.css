@@ -5,7 +5,7 @@
 @layer base {
   .layout {
     /* 1100px */
-    max-width: 68.75rem;
+    max-width: 90rem;
     @apply tw-mx-auto tw-w-11/12;
   }
 
