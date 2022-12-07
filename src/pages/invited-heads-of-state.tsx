@@ -71,6 +71,56 @@ export default function InvitedHeadsOfStatePage() {
       degi: 'President of Angola',
       image: '/images/profiles/João-Manuel-Gonçalves-Lourenço.png',
     },
+    {
+      name: 'H.E. Paul Kagame',
+      degi: 'President of Rwanda',
+      image: '/images/profiles/Paul-Kagame.png',
+    },
+    {
+      name: 'H.E. Macky Sall',
+      degi: 'President of Senegal & Chairperson of the AU',
+      image: '/images/profiles/Macky-Sall.png',
+    },
+    {
+      name: 'H.E. Mia Motley',
+      degi: 'Prime Minister of Barbados',
+      image: '/images/profiles/Mia-Motley.png',
+    },
+    {
+      name: 'H.E. Alassane Ouattara',
+      degi: "President of Côte d'Ivoire",
+      image: '/images/profiles/Alassane-Ouattara.png',
+    },
+    {
+      name: 'H.E. William Ruto',
+      degi: 'President of Kenya',
+      image: '/images/profiles/William-Ruto.png',
+    },
+    {
+      name: 'H.E. Sahle-Work Zewde',
+      degi: 'President of Ethiopia',
+      image: '/images/profiles/Sahle-Work-Zewde.png',
+    },
+    {
+      name: 'H.E. Teodoro O. Nguema',
+      degi: 'President of Equatorial Guinea',
+      image: '/images/profiles/Teodoro-Nguema.png',
+    },
+    {
+      name: 'H.E. Samia Suluhu Hassan',
+      degi: 'President of Tanzania',
+      image: '/images/profiles/Samia-Suluhu-Hassan.png',
+    },
+    {
+      name: 'H.E. Umaro Sissoco Embaló',
+      degi: 'President of Guinea-Bissau',
+      image: '/images/profiles/Umaro-Sissoco-Embaló.png',
+    },
+    {
+      name: 'H.E. Mahamadou Issoufou',
+      degi: 'Former Nigerien President',
+      image: '/images/profiles/Mahamadou-Issoufou.png',
+    },
   ];
 
   return (
