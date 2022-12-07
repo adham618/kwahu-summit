@@ -667,6 +667,7 @@
     }
   }
   .regi-form {
+    margin-bottom: 30px;
     .form-control {
       border-width: 0 0 1px 0;
       border-style: solid;
@@ -675,7 +676,6 @@
       border-radius: 0;
       font-weight: 600;
       height: 58px;
-      margin-bottom: 30px;
       font-size: 12px;
       font-family: $Gilroy;
       &:focus {
@@ -708,7 +708,6 @@
       border-radius: 0;
       font-weight: 600;
       height: 58px;
-      margin-bottom: 30px;
       font-size: 12px;
       font-family: $Gilroy;
       width: 100%;
