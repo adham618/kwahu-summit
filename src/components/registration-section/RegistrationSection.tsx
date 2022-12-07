@@ -118,12 +118,26 @@ const RegistrationSection = () => {
           </div>
           <div className='col-md-3'>
             <div className='regi-form'>
-              <input
+              <select
                 className='form-control'
                 {...register('title', registerOptions.title)}
-                type='text'
-                placeholder='TITLE*'
-              />
+                defaultValue=''
+              >
+                <option value='' disabled hidden>
+                  TITLE*
+                </option>
+                <option value='Hon.'>Hon.</option>
+                <option value='H.E.'>H.E.</option>
+                <option value='Mr.'>Mr.</option>
+                <option value='Mrs.'>Mrs.</option>
+                <option value='Dr.'>Dr.</option>
+                <option value='Prof.'>Prof.</option>
+                <option value='Gen.'>Gen.</option>
+                <option value='Sir.'>Sir.</option>
+                <option value='Ing.'>Ing.</option>
+                <option value='Esq.'>Esq.</option>
+                <option value='Other'>Other</option>
+              </select>
               {errors.title && (
                 <span className='tw-mt-2 tw-block tw-text-[14px] tw-font-bold tw-leading-5 tw-text-red-500'>
                   {errors.title.message}
@@ -245,7 +259,7 @@ const RegistrationSection = () => {
                 defaultValue=''
               >
                 <option value='' disabled hidden>
-                  select counTry
+                  Select country
                 </option>
                 {options.map((option, index) => {
                   return (
@@ -294,21 +308,31 @@ const RegistrationSection = () => {
             <div className='regi-form'>
               <label htmlFor='pc'>Participant Categories**</label>
               <select
-                {...register('ParticipantCategories', registerOptions.STATE)}
+                {...register(
+                  'ParticipantCategories',
+                  registerOptions.ParticipantCategories
+                )}
                 id='pc'
                 defaultValue=''
               >
                 <option value='' disabled hidden>
-                  select country
+                  Select
                 </option>
-                {options.map((option, index) => {
-                  return (
-                    <option key={index} value={option.value}>
-                      {option.label}
-                    </option>
-                  );
-                })}
+                <option value='Government Official'>Government Official</option>
+                <option value='Diplomat'>Diplomat</option>
+                <option value='Business Entity'>Business Entity</option>
+                <option value='Civil Society Organisation'>
+                  Civil Society Organisation
+                </option>
+                <option value='Trade Association'>Trade Association</option>
+                <option value='Media'>Media</option>
+                <option value='Other'>Other</option>
               </select>
+              {errors.ParticipantCategories && (
+                <span className='tw-mt-2 tw-block tw-text-[14px] tw-font-bold tw-leading-5 tw-text-red-500'>
+                  {errors.ParticipantCategories.message}
+                </span>
+              )}
             </div>
           </div>
           <div className='col-md-12'>
