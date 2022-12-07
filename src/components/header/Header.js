@@ -103,6 +103,15 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
+                  <li className='nav-item'>
+                    <Link
+                      href='/gallery'
+                      className='nav-link active'
+                      aria-current='page'
+                    >
+                      Gallery
+                    </Link>
+                  </li>
                   <li className='nav-item dropdown'>
                     <a
                       className='nav-link dropdown-toggle'

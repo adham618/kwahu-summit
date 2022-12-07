@@ -21,7 +21,7 @@ const desc_list_2 = [
 export default function HostPage() {
   return (
     <Layout>
-      <Seo templateTitle='Host' />
+      <Seo templateTitle='the host' />
 
       <main>
         <div className='host-page'>

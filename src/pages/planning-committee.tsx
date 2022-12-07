@@ -19,10 +19,20 @@ export default function PlanningCommitteePage() {
           <Header />
           <HeroSectionSM
             image='/images/header-bg/planning-bg.png'
-            title='Planning committee'
+            name='Planning committee'
             desc='About the Summit'
           />
           <PlanningCommitteSection />
+          <div className='tw-mx-auto tw-mb-14 tw-max-w-[990px] tw-text-center tw-text-base tw-font-bold tw-leading-8 tw-text-[#59566F]'>
+            <p>
+              The planning committee is made up of designated persons from all
+              our partner organizations.
+            </p>
+            <p>
+              The planning committee works APN’s functional team to produce
+              content, programme and invitation list for summit.
+            </p>
+          </div>
           <Footer />
         </div>
       </main>
