@@ -26,11 +26,11 @@ const nextConfig = {
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: [
+        'next-swc-loader',
         {
           loader: '@svgr/webpack',
           options: {
-            typescript: true,
-            icon: true,
+            babel: false,
           },
         },
       ],
