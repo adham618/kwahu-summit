@@ -21,16 +21,11 @@ const nextConfig = {
   // },
 
   // SVGR
+  // eslint-disable-next-line unused-imports/no-unused-vars
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
-      use: [
-        options.defaultLoaders.babel,
-        {
-          loader: '@svgr/webpack',
-          options: { babel: false },
-        },
-      ],
+      use: ['@svgr/webpack'],
     });
     return config;
   },
