@@ -1,7 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import countryList from 'react-select-country-list';
 
 const RegistrationSection = () => {
+  const options = React.useMemo(() => countryList().getData(), []);
+
   type Inputs = {
     title: string;
     firstName: string;
@@ -14,6 +17,7 @@ const RegistrationSection = () => {
     STATE: string;
     intraAfrica: string;
     presidential: string;
+    ParticipantCategories: string;
   };
   const {
     register,
@@ -95,6 +99,9 @@ const RegistrationSection = () => {
     STATE: {
       required: 'The State Field is required',
     },
+    ParticipantCategories: {
+      required: 'The Participant Categories Field is required',
+    },
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='registration-section'>
@@ -105,7 +112,7 @@ const RegistrationSection = () => {
               <span>"*" indicates required fields</span>
               <h3>
                 Kindly complete this registration form to attend The Africa
-                Prosperity Dialogues 2023 in Ghana.
+                Prosperity Dialogues 2023 in Ghana. =
               </h3>
             </div>
           </div>
@@ -240,9 +247,13 @@ const RegistrationSection = () => {
                 <option value='' disabled hidden>
                   select counTry
                 </option>
-                <option value='1'>select counTry</option>
-                <option value='1'>select counTry</option>
-                <option value='1'>select counTry</option>
+                {options.map((option, index) => {
+                  return (
+                    <option key={index} value={option.value}>
+                      {option.label}
+                    </option>
+                  );
+                })}
               </select>
               {errors.nationality && (
                 <span className='tw-mt-2 tw-block tw-text-[14px] tw-font-bold tw-leading-5 tw-text-red-500'>
@@ -282,14 +293,21 @@ const RegistrationSection = () => {
           <div className='col-md-12'>
             <div className='regi-form'>
               <label htmlFor='pc'>Participant Categories**</label>
-              <select id='pc' defaultValue=''>
+              <select
+                {...register('ParticipantCategories', registerOptions.STATE)}
+                id='pc'
+                defaultValue=''
+              >
                 <option value='' disabled hidden>
                   select country
                 </option>
-                <option value='1'>select country</option>
-                <option value='1'>select country</option>
-                <option value='1'>select country</option>
-                <option value='1'>select country</option>
+                {options.map((option, index) => {
+                  return (
+                    <option key={index} value={option.value}>
+                      {option.label}
+                    </option>
+                  );
+                })}
               </select>
             </div>
           </div>
