@@ -46,3 +46,11 @@ html {
     background-size: 0 2px, 100% 2px;
   }
 }
+.react-tel-input .country-list .flag {
+  margin-top: 9px !important;
+}
+.react-tel-input .selected-flag:focus:before,
+.react-tel-input .selected-flag.open:before {
+  box-shadow: none !important;
+  border: none !important;
+}

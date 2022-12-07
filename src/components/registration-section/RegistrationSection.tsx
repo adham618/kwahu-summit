@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import PhoneInput from 'react-phone-input-2';
 import countryList from 'react-select-country-list';
+
+import 'react-phone-input-2/lib/bootstrap.css';
 
 const RegistrationSection = () => {
   const options = React.useMemo(() => countryList().getData(), []);
@@ -22,6 +25,7 @@ const RegistrationSection = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<Inputs>({ mode: 'onChange' });
 
@@ -228,11 +232,20 @@ const RegistrationSection = () => {
           </div>
           <div className='col-md-4'>
             <div className='regi-form'>
-              <input
-                className='form-control'
-                type='text'
-                placeholder='PHONE*'
-                {...register('phone', registerOptions.phone)}
+              <Controller
+                name='phone'
+                control={control}
+                rules={registerOptions.phone}
+                render={({ field: { onChange, value } }) => (
+                  <PhoneInput
+                    value={value}
+                    onChange={(value) => onChange(value)}
+                    country='ga'
+                    placeholder='PHONE*'
+                    inputClass='!tw-w-full focus:!tw-border-black focus:!tw-bg-[unset] focus:tw-shadow-outline'
+                    dropdownClass='!tw-w-max'
+                  />
+                )}
               />
               {errors.phone && (
                 <span className='tw-mt-2 tw-block tw-text-[14px] tw-font-bold tw-leading-5 tw-text-red-500'>
