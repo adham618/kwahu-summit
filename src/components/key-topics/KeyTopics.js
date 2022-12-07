@@ -9,7 +9,7 @@ const KeyTopics = () => {
       <SectionHeader title='Key topics' />
       <div className='key-topic'>
         <div className='container-fluid'>
-          <div className='row tw-items-center tw-space-y-4 tw-space-y-4'>
+          <div className='row tw-items-center tw-space-y-4'>
             <div className='col-md-4'>
               <CardKeyTopic
                 image='/images/key-topic/key-topic-1.png'
