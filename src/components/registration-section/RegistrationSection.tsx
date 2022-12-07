@@ -133,13 +133,21 @@ const RegistrationSection = () => {
               <label htmlFor='STATE'>I will attend:*</label>
             </div>
             <div className='regi-form regi-checkbox'>
-              <input type='checkbox' id='intra-africa' />
+              <input
+                className='tw-mr-2.5 tw-h-4 tw-w-4 tw-cursor-pointer tw-rounded-[2px] !tw-border-2 tw-border-solid !tw-border-[#00A139] tw-text-[#00A139] tw-ring-offset-0 focus:tw-shadow-none focus:tw-ring-0 focus:tw-ring-offset-0'
+                type='checkbox'
+                id='intra-africa'
+              />
               <label htmlFor='intra-africa'>
                 Intra-Africa Trade Forum – 26th & 27th January, 2023
               </label>
             </div>
             <div className='regi-form regi-checkbox'>
-              <input type='checkbox' id='presidential' />
+              <input
+                className='tw-mr-2.5 tw-h-4 tw-w-4 tw-cursor-pointer tw-rounded-[2px] !tw-border-2 tw-border-solid !tw-border-[#00A139] tw-text-[#00A139] tw-ring-offset-0 focus:tw-shadow-none focus:tw-ring-0 focus:tw-ring-offset-0'
+                type='checkbox'
+                id='presidential'
+              />
               <label htmlFor='presidential'>
                 Presidential & Business Executives Dialogue – 28th January, 2023
               </label>
