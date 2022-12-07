@@ -9,7 +9,7 @@ import Layout from '@/components/layout/Layout';
 import PageShape from '@/components/page-shape/PageShape';
 import Seo from '@/components/Seo';
 
-export default function SpeakerPage() {
+export default function InvitedHeadsOfStatePage() {
   return (
     <Layout>
       <Seo templateTitle='Speaker' />

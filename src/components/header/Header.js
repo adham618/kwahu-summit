@@ -86,7 +86,10 @@ const Header = () => {
                     </a>
                     <ul className='dropdown-menu'>
                       <li>
-                        <Link className='dropdown-item' href='/speakers'>
+                        <Link
+                          className='dropdown-item'
+                          href='/invited-heads-of-state'
+                        >
                           Invited Heads of State
                         </Link>
                       </li>
