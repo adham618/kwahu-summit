@@ -1,6 +1,6 @@
 import React from 'react';
 
-import VideoSection from '../video/video-section';
+import VideoSection from '@/components/video/VideoSection';
 
 const NewsDetailSection3 = () => {
   return (

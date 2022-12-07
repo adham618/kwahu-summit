@@ -8,7 +8,7 @@ import Layout from '@/components/layout/Layout';
 import ObjectivesSection from '@/components/objectives-section/ObjectivesSection';
 import PageShape from '@/components/page-shape/PageShape';
 import Seo from '@/components/Seo';
-import VideoSection from '@/components/video/video-section';
+import VideoSection from '@/components/video/VideoSection';
 
 export default function AboutSummitPage() {
   return (

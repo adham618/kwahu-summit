@@ -2,6 +2,7 @@
 import React from 'react';
 
 import SectionHeader from '../section-header/SectionHeader';
+
 const sponsor_lists = [
   {
     name: 'Lead SponsorS',
@@ -59,6 +60,7 @@ const SponsorsSection = () => {
   return (
     <div className='sponsor-section'>
       <SectionHeader title='Sponsors' />
+
       <div className='sponsor-box'>
         {sponsor_lists.map((sponsor, index) => (
           <div className='sponsor-item' key={index}>

@@ -12,7 +12,7 @@ import NewSection from '@/components/news-section/NewSection';
 import NotableSection from '@/components/notable-section/notable-section';
 import Seo from '@/components/Seo';
 import SponsorsSection from '@/components/sponsors-section/SponsorsSection';
-import VideoSection from '@/components/video/video-section';
+import VideoSection from '@/components/video/VideoSection';
 import WhoAttending from '@/components/who-attending/whoAttending';
 export default function HomePage() {
   return (
