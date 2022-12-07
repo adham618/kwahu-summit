@@ -47,7 +47,7 @@ export default function VideoModal({
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  className='tw-h-full tw-w-full tw-rounded-3xl tw-object-cover'
+                  className='tw-h-full tw-w-full tw-rounded-3xl tw-bg-cover tw-object-cover'
                   src='/images/video-bg.png'
                   alt='videoThumbnail'
                 />
@@ -59,9 +59,7 @@ export default function VideoModal({
                 }`}
               >
                 <PlayBtn
-                  className={`${
-                    playing ? 'tw-hidden' : ''
-                  } tw-h-10 tw-w-10 sm:tw-h-16 sm:tw-w-16`}
+                  className={`${playing ? 'tw-hidden' : ''} tw-h-16 tw-w-16`}
                 />
               </div>
             </div>
