@@ -21,21 +21,17 @@ const nextConfig = {
   // },
 
   // SVGR
-  webpack(config) {
+  webpack: (config, options) => {
     config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
+      test: /\.svg$/,
       use: [
-        'next-swc-loader',
+        options.defaultLoaders.babel,
         {
           loader: '@svgr/webpack',
-          options: {
-            babel: false,
-          },
+          options: { babel: false },
         },
       ],
     });
-
     return config;
   },
 };
