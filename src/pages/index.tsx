@@ -15,7 +15,7 @@ import SponsorsSection from '@/components/sponsors-section/SponsorsSection';
 import VideoSection from '@/components/video/VideoSection';
 import WhoAttending from '@/components/who-attending/whoAttending';
 export default function HomePage() {
-  const data = [
+  const NotableData = [
     {
       name: 'Aliko Dangote',
       degi: 'Chairman and CEO, Dangote Group',
@@ -77,6 +77,68 @@ export default function HomePage() {
       image: '/images/profiles/Carl-Cruz.png',
     },
   ];
+  const InvitedHeadsData = [
+    {
+      name: 'H.E. Abdel Fattah El-Sisi',
+      degi: 'President of the Arab Republic of Egypt',
+      image: '/images/profiles/Abdel-Fattah-El-Sisi.png',
+    },
+    {
+      name: 'H.E. Aziz Akhannouch',
+      degi: 'Prime Minister of Morocco',
+      image: '/images/profiles/Aziz-Akhannouch.png',
+    },
+    {
+      name: 'H.E. Mohamed Bazoum',
+      degi: 'President of Niger',
+      image: '/images/profiles/Mohamed-Bazoum.png',
+    },
+    {
+      name: 'H.E. Muhammadu Buhari',
+      degi: 'President of the Federal Republic of Nigeria',
+      image: '/images/profiles/Muhammadu-Buhari.png',
+    },
+    {
+      name: 'H.E Cyril Ramaphosa',
+      degi: 'President of South Africa',
+      image: '/images/profiles/Cyril-Ramaphosa.png',
+    },
+    {
+      name: 'H.E. Denis Sassou Nguesso',
+      degi: 'President of the Republic of the Congo',
+      image: '/images/profiles/Denis-Sassou-Nguesso.png',
+    },
+    {
+      name: 'H.E. Yoweri K. Museveni',
+      degi: 'President of Uganda',
+      image: '/images/profiles/Yoweri-Museveni.png',
+    },
+    {
+      name: 'H.E. Evariste Ndayishimiye',
+      degi: 'President of Burundi',
+      image: '/images/profiles/Evariste-Ndayishimiye.png',
+    },
+    {
+      name: 'H.E. Faure Gnassingbe',
+      degi: 'President of Togo',
+      image: '/images/profiles/Faure-Gnassingbe.png',
+    },
+    {
+      name: 'H.E Félix A. Tshisekedi Tshilombo',
+      degi: 'President, the Democratic Republic of the Congo',
+      image: '/images/profiles/Tshisekedi-Tshilombo.png',
+    },
+    {
+      name: 'H.E. Hakainde Hichilema',
+      degi: 'President of Zambia',
+      image: '/images/profiles/Hakainde-Hichilema.png',
+    },
+    {
+      name: 'H.E. João Manuel Gonçalves Lourenço',
+      degi: 'President of Angola',
+      image: '/images/profiles/João-Manuel-Gonçalves-Lourenço.png',
+    },
+  ];
   return (
     <Layout>
       <Seo />
@@ -88,8 +150,8 @@ export default function HomePage() {
             <About hasDot={true} />
             <VideoSection />
             <WhoAttending />
-            <InviteSection hideButton={true} />
-            <NotableSection data={data} hideButton={true} />
+            <InviteSection data={InvitedHeadsData} hideButton={true} />
+            <NotableSection data={NotableData} hideButton={true} />
             <KeyTopics />
             <NewSection />
             <FAQSection />

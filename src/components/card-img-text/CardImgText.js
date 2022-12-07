@@ -13,7 +13,7 @@ const CardImgText = (props) => {
       </div>
       <div className='content tw-flex-grow'>
         <h3 className='!tw-text-xl'>{props.name}</h3>
-        <p>{props.degi}</p>
+        <p className='tw-leading-5'>{props.degi}</p>
       </div>
     </div>
   );
