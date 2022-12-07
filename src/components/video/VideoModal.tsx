@@ -27,7 +27,7 @@ export default function VideoModal({
             onClick={() => setShowModal(false)}
             className='top-[-200px] tw-fixed tw-inset-0 tw-z-[9999] tw-min-h-screen tw-cursor-pointer tw-bg-black/50 tw-transition-all tw-duration-300'
           ></div>
-          <div className='tw-fixed tw-left-1/2 tw-top-1/2 tw-z-[99999] tw-h-[600px] tw-max-h-[90vh] tw-min-h-[477px] tw-w-[886px] tw-max-w-[90%]  tw--translate-x-1/2 tw--translate-y-1/2 tw-transform tw-rounded-3xl tw-border-4 tw-border-[#CFCED6] tw-bg-white'>
+          <div className='tw-fixed tw-left-1/2 tw-top-1/2 tw-z-[99999] tw-h-[600px] tw-max-h-[90vh] tw-w-[1086px] tw-max-w-[90%]  tw--translate-x-1/2 tw--translate-y-1/2 tw-transform tw-rounded-3xl tw-border-4 tw-border-[#CFCED6] tw-bg-white'>
             <div className='tw-relative tw-mx-auto tw-flex tw-h-full tw-w-full tw-max-w-full tw-justify-center tw-overflow-hidden tw-rounded-3xl'>
               <video
                 onPlay={() => setvideoThumbnail(false)}
