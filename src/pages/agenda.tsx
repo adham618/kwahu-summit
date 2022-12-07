@@ -18,7 +18,7 @@ export default function AgendaPage() {
           <PageShape />
           <Header />
           <HeroSectionSM
-            image='/images/header-bg/the-aft-bg.png'
+            image='/images/header-bg/agenda-bg.png'
             name='The AU Agenda 2063'
             desc='The AU Agenda 2063'
           />
