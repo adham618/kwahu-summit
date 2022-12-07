@@ -34,8 +34,8 @@ const Footer = () => {
             <div className='footer-center'>
               <div className='row'>
                 <div className='col-md-9'>
-                  <div className='footer-links'>
-                    <div className='footer-link-item'>
+                  <div className='footer-links w-full !tw-grid tw-flex-none tw-auto-rows-auto tw-grid-cols-5'>
+                    <div className='footer-link-item m-0'>
                       <h3>&nbsp;</h3>
                       <ul>
                         <li>
@@ -49,7 +49,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className='footer-link-item'>
+                    <div className='footer-link-item m-0'>
                       <h3>Who is attending</h3>
                       <ul>
                         <li>
@@ -63,7 +63,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className='footer-link-item'>
+                    <div className='footer-link-item m-0'>
                       <h3>Resourses</h3>
                       <ul>
                         <li>
@@ -77,7 +77,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className='footer-link-item'>
+                    <div className='footer-link-item m-0'>
                       <h3>Event guide</h3>
                       <ul>
                         <li>
@@ -91,7 +91,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                    <div className='footer-link-item no-title'>
+                    <div className='footer-link-item m-0 no-title'>
                       <ul>
                         <li>
                           <Link href='/'>Contact us</Link>
@@ -134,7 +134,10 @@ const Footer = () => {
                         </Link>
                       </li>
                     </ul>
-                    <p>Copyright &copy; 2023. All Rights Reserved.</p>
+                    <p>
+                      Copyright &copy; {new Date().getFullYear()}. All Rights
+                      Reserved.
+                    </p>
                   </div>
                 </div>
               </div>
