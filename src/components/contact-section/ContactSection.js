@@ -21,7 +21,11 @@ const ContactSection = () => {
                 <textarea type='textarea' className='form-control'></textarea>
               </div>
               <div className='form-item form-checkbox'>
-                <input type='checkbox' id='agree' />
+                <input
+                  className='tw-mr-2.5 tw-h-4 tw-w-4 tw-cursor-pointer tw-rounded-[2px] !tw-border-2 tw-border-solid !tw-border-[#00A139] tw-text-[#00A139] tw-ring-offset-0 focus:tw-shadow-none focus:tw-ring-0 focus:tw-ring-offset-0'
+                  type='checkbox'
+                  id='agree'
+                />
                 <label htmlFor='agree'>I agree with terms and conditions</label>
               </div>
               <div className='form-item'>
@@ -47,7 +51,7 @@ const ContactSection = () => {
                 </li>
                 <li>
                   <span>
-                    <img src='/images/icons/location.png' alt='icon' />
+                    <img src='/images/icons/location.svg' alt='icon' />
                   </span>
                   <span>#5, 4th Dade Walk, Labone - Accra, Ghana</span>
                 </li>

@@ -27,17 +27,18 @@ export default function AccraPage() {
               title='Welcome reception'
               date='27 January (Evening)'
               desc='An exclusive welcome cocktail reception with participants for the Presidential and Business Executives’ Dialogues'
-              image='/images/avatar-icon.png'
+              image='/images/avatar-icon.svg'
               name='Hosted by KGL Group'
               location='Kempinski Hotel, Accra, Ghana'
             />
             <CardAddress
               title='Banquet & Awards'
               date='27 January (Evening)'
-              desc='Official Banquet, Awards ceremony, and Launch of the Africa Investment Promotion Agencies. Strictly by Invitation'
-              image='/images/avatar-icon.png'
-              name='Hosted by KGL Group'
+              desc='Official Banquet, Awards ceremony, and Launch of the Africa Investment Promotion Agencies.'
+              image='/images/avatar-icon.svg'
+              name='AfDB and GIPC'
               location='Kempinski Hotel, Accra, Ghana'
+              byInvitation
             />
           </div>
           <Footer />
