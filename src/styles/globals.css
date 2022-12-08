@@ -54,3 +54,6 @@ html {
   box-shadow: none !important;
   border: none !important;
 }
+.lg-backdrop.in {
+  opacity: 0.6 !important;
+}
