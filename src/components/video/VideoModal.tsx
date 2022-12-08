@@ -1,6 +1,6 @@
 import * as React from 'react';
+import YouTube, { YouTubeProps } from 'react-youtube';
 
-import PlayBtn from '@/assets/PlayBtn.svg';
 type VideoModalProps = {
   showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,15 +9,19 @@ export default function VideoModal({
   showModal,
   setShowModal,
 }: VideoModalProps) {
-  const [playbtn, setplaybtn] = React.useState(false);
-  const [playing, setplaying] = React.useState(false);
-  const vidRef = React.useRef<HTMLVideoElement>(null);
-  const handlePlayVideo = () => {
-    playing ? vidRef.current?.pause() : vidRef.current?.play();
-    setplaying(!playing);
-    setplaybtn(!playbtn);
+  const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
   };
 
+  const opts: YouTubeProps['opts'] = {
+    height: '100%',
+    width: '100%',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
   return (
     <>
       {showModal && (
@@ -26,31 +30,13 @@ export default function VideoModal({
             onClick={() => setShowModal(false)}
             className='top-[-200px] tw-fixed tw-inset-0 tw-z-[9999] tw-min-h-screen tw-cursor-pointer tw-bg-black/50 tw-transition-all tw-duration-300'
           ></div>
-          <div className='tw-fixed tw-left-1/2 tw-top-1/2 tw-z-[99999] tw-h-[470px] tw-max-h-[90vh] tw-w-[1086px] tw-max-w-[90%] tw--translate-x-1/2  tw--translate-y-1/2 tw-transform tw-rounded-3xl tw-border-4 tw-border-[#CFCED6] tw-bg-white sm:tw-h-[600px]'>
-            <div className='tw-relative tw-mx-auto tw-flex tw-h-full tw-w-full tw-max-w-full tw-justify-center tw-overflow-hidden tw-rounded-3xl'>
-              <video
-                onEnded={() => setplaying(false)}
-                ref={vidRef}
-                className='tw-mx-auto tw-ml-auto tw-h-full tw-w-full tw-rounded-3xl tw-object-cover'
-                playsInline
-              >
-                <source
-                  src='https://www.youtube.com/watch?v=eaedq1Jl2fc'
-                  type='video/mp4'
-                />
-              </video>
-
-              <div
-                onClick={handlePlayVideo}
-                className={`tw-absolute tw-inset-0 tw-flex tw-h-full tw-w-full tw-cursor-pointer tw-items-center tw-justify-center tw-rounded-3xl ${
-                  playing ? '' : 'tw-bg-black/20'
-                }`}
-              >
-                <PlayBtn
-                  className={`${playing ? 'tw-hidden' : ''} tw-h-16 tw-w-16`}
-                />
-              </div>
-            </div>
+          <div className='tw-fixed tw-left-1/2 tw-top-1/2 tw-z-[99999] tw-h-[470px] tw-max-h-[90vh] tw-w-[1086px] tw-max-w-[90%] tw--translate-x-1/2  tw--translate-y-1/2 tw-transform sm:tw-h-[600px]'>
+            <YouTube
+              className='tw-h-full tw-w-full tw-object-cover'
+              videoId='2g811Eo7K8U'
+              opts={opts}
+              onReady={onPlayerReady}
+            />
           </div>
         </>
       )}
