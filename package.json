@@ -18,8 +18,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@types/google-map-react": "^2.1.7",
     "bootstrap": "^5.2.3",
     "clsx": "^1.2.1",
+    "google-map-react": "^2.2.0",
     "lightgallery": "^2.7.0",
     "next": "^13.0.6",
     "react": "^18.2.0",
