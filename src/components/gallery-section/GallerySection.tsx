@@ -1,32 +1,33 @@
 import { useState } from 'react';
-import { Gallery } from 'react-grid-gallery';
+import * as React from 'react';
+import Gallery from 'react-photo-gallery';
 import Lightbox from 'yet-another-react-lightbox';
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
-import { CustomImage, images } from './images';
+import { photos } from './photos';
 
-const slides = images.map(({ original, width, height }) => ({
-  src: original,
+const slides = photos.map(({ src, width, height }) => ({
+  src: src,
   width,
   height,
 }));
-
 const GallerySection = () => {
   const [index, setIndex] = useState(-1);
 
-  // eslint-disable-next-line unused-imports/no-unused-vars
-  const handleClick = (index: number, item: CustomImage) => setIndex(index);
-
+  const openLightbox = React.useCallback(
+    // eslint-disable-next-line unused-imports/no-unused-vars, @typescript-eslint/no-explicit-any
+    (event: any, { photo, index }: any) => {
+      setIndex(index);
+    },
+    []
+  );
   return (
     <div className='gallery-section'>
-      <Gallery
-        images={images}
-        onClick={handleClick}
-        enableImageSelection={false}
-      />
+      <Gallery photos={photos} onClick={openLightbox} />
+
       <Lightbox
         styles={{ root: { '--yarl__color_backdrop': 'rgba(0, 0, 0, .8)' } }}
         slides={slides}
