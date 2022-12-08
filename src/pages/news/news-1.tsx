@@ -11,7 +11,7 @@ import Seo from '@/components/Seo';
 export default function NewsDetail2Page() {
   return (
     <Layout>
-      <Seo templateTitle='News 1' />
+      <Seo templateTitle='“It’s time to move from mere negotiations to trading among ourselves” H.E. Joao Baptista Domingos Quiosa,' />
 
       <main>
         <div className='news-detail-page'>
@@ -19,7 +19,7 @@ export default function NewsDetail2Page() {
           <Header />
           <HeroSectionSM
             image='/images/header-bg/news-bg-2.png'
-            name='“It’s time to move from mere negotiations to trading among ourselves” H.E. Joao Baptista Domingos Quiosa, '
+            name='“It’s time to move from mere negotiations to trading among ourselves” H.E. Joao Baptista Domingos Quiosa,'
           />
           <NewsDetailSection2 />
           <Footer />

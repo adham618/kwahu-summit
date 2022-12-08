@@ -11,7 +11,7 @@ import Seo from '@/components/Seo';
 export default function NewDetailPage6() {
   return (
     <Layout>
-      <Seo templateTitle='News 6' />
+      <Seo templateTitle='AAAM, AfCFTA brainstorm on how to fast-track devt of African automobile sector' />
 
       <main>
         <div className='news-detail-page'>

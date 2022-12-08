@@ -11,7 +11,7 @@ import Seo from '@/components/Seo';
 export default function NewDetailPage3() {
   return (
     <Layout>
-      <Seo templateTitle='News 3' />
+      <Seo templateTitle='Kwahu summit launched – Ghana to host Africa’s prosperity dialogues' />
 
       <main>
         <div className='news-detail-page'>
