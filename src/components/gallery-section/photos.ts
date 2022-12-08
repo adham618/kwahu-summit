@@ -11,7 +11,7 @@ export const photos = [
   },
   {
     src: '/images/gallery/3.png',
-    width: 326.65,
+    width: 159.24,
     height: 160.18,
   },
   {
