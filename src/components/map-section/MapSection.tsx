@@ -5,8 +5,8 @@ import React from 'react';
 const MapSection = () => {
   const defaultProps = {
     center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
+      lat: 5.614818,
+      lng: -0.205874,
     },
     zoom: 11,
   };
