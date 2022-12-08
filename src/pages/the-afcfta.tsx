@@ -1,8 +1,6 @@
 import * as React from 'react';
 
 import CardTitleText from '@/components/card-title-text/CardTitleText';
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
 import HeroSectionSM from '@/components/hero-section-sm/HeroSectionSM';
 import PageShape from '@/components/page-shape/PageShape';
 
@@ -27,7 +25,6 @@ export default function TheAfcftaPage() {
       <main>
         <div className='the-afcta'>
           <PageShape />
-          <Header />
           <HeroSectionSM
             image='/images/header-bg/the-aft-bg.png'
             name='The AfCFTA'
@@ -39,7 +36,6 @@ export default function TheAfcftaPage() {
             title='AfCFTA contributions to the African Economy'
             desc_list={desc_list_2}
           />
-          <Footer />
         </div>
       </main>
     </Layout>

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
 import HeaderText from '@/components/header-text/HeaderText';
 import HeroSectionSM from '@/components/hero-section-sm/HeroSectionSM';
 import Layout from '@/components/layout/Layout';
@@ -128,7 +126,6 @@ export default function InvitedPersonalitiesPage() {
       <main>
         <div className='speaker-page'>
           <PageShape />
-          <Header />
           <HeroSectionSM
             image='/images/header-bg/speaker-2-bg.png'
             name='Invited Personalities'
@@ -136,7 +133,6 @@ export default function InvitedPersonalitiesPage() {
           />
           <HeaderText />
           <NotableSection data={data} hideButton={false} />
-          <Footer />
         </div>
       </main>
     </Layout>

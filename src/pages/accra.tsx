@@ -1,8 +1,6 @@
 import React from 'react';
 
 import CardAddress from '@/components/card-address/CardAddress';
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
 import HeroSectionSM from '@/components/hero-section-sm/HeroSectionSM';
 import Layout from '@/components/layout/Layout';
 import PageShape from '@/components/page-shape/PageShape';
@@ -16,7 +14,6 @@ export default function AccraPage() {
       <main>
         <div className='accra-page'>
           <PageShape />
-          <Header />
           <HeroSectionSM
             image='/images/header-bg/accra-bg.jpg'
             name='Accra'
@@ -41,7 +38,6 @@ export default function AccraPage() {
               byInvitation
             />
           </div>
-          <Footer />
         </div>
       </main>
     </Layout>

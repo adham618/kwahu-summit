@@ -1,8 +1,6 @@
 import * as React from 'react';
 
 import CardAddress from '@/components/card-address/CardAddress';
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
 import HeroSectionSM from '@/components/hero-section-sm/HeroSectionSM';
 import Layout from '@/components/layout/Layout';
 import PageShape from '@/components/page-shape/PageShape';
@@ -16,7 +14,6 @@ export default function PeduasePage() {
       <main>
         <div className='peduase-page'>
           <PageShape />
-          <Header />
           <HeroSectionSM
             image='/images/header-bg/peduase-bg.png'
             name='Peduase'
@@ -33,7 +30,6 @@ export default function PeduasePage() {
               location='Peduase, Aburi Mountains, Eastern Ghana'
             />
           </div>
-          <Footer />
         </div>
       </main>
     </Layout>

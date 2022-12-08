@@ -1,8 +1,6 @@
 import React from 'react';
 
 import CardTitleText from '@/components/card-title-text/CardTitleText';
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
 import HeroSectionSM from '@/components/hero-section-sm/HeroSectionSM';
 import Layout from '@/components/layout/Layout';
 import PageShape from '@/components/page-shape/PageShape';
@@ -26,7 +24,6 @@ export default function HostPage() {
       <main>
         <div className='host-page'>
           <PageShape />
-          <Header />
           <HeroSectionSM
             image='/images/header-bg/host-bg.png'
             name='The Host'
@@ -38,7 +35,6 @@ export default function HostPage() {
             title='AfCFTA contributions to the African Economy'
             desc_list={desc_list_2}
           />
-          <Footer />
         </div>
       </main>
     </Layout>

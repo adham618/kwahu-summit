@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import About from '@/components/about/About';
 import FAQSection from '@/components/faq-section/FAQSection';
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
 import HeroSection from '@/components/hero-section/HeroSection';
 import InviteSection from '@/components/invite-section/InviteSection';
 import KeyTopics from '@/components/key-topics/KeyTopics';
@@ -145,7 +143,6 @@ export default function HomePage() {
       <main>
         <div className='home-page'>
           <div className='main-head'>
-            <Header />
             <HeroSection />
             <About hasDot={true} />
             <VideoSection />
@@ -156,7 +153,6 @@ export default function HomePage() {
             <NewSection />
             <FAQSection />
             <SponsorsSection />
-            <Footer />
           </div>
         </div>
       </main>
