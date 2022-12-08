@@ -28,12 +28,13 @@
     "react-hook-form": "^7.40.0",
     "react-icons": "^4.7.1",
     "react-phone-input-2": "^2.15.1",
+    "react-photo-album": "^1.16.1",
     "react-select-country-list": "^2.2.3",
     "react-slick": "^0.29.0",
     "sass": "^1.56.1",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^1.8.0",
-    "yet-another-react-lightbox": "^2.2.2"
+    "yet-another-react-lightbox": "^2.2.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",

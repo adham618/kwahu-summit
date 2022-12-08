@@ -4881,7 +4881,7 @@ levn@~0.3.0:
 
 lightgallery@^2.7.0:
   version "2.7.0"
-  resolved "https://registry.yarnpkg.com/lightgallery/-/lightgallery-2.7.0.tgz#faa1ff6c7338557f39a29a63228b77793afad95d"
+  resolved "https://registry.npmjs.org/lightgallery/-/lightgallery-2.7.0.tgz"
   integrity sha512-iozIJNxKl3wPWcspCmRdaSYpYy3PjloC8BN0PDwaDOoTA1hsu1IhZdWQWI5cGgMJvnksP94/smElMwn2HS5d3Q==
 
 lilconfig@2.0.5:
@@ -5681,7 +5681,7 @@ react-is@^18.0.0:
 
 react-phone-input-2@^2.15.1:
   version "2.15.1"
-  resolved "https://registry.yarnpkg.com/react-phone-input-2/-/react-phone-input-2-2.15.1.tgz#31edf2adb03cbc990b5432e0567d8a5303f3de49"
+  resolved "https://registry.npmjs.org/react-phone-input-2/-/react-phone-input-2-2.15.1.tgz"
   integrity sha512-W03abwhXcwUoq+vUFvC6ch2+LJYMN8qSOiO889UH6S7SyMCQvox/LF3QWt+cZagZrRdi5z2ON3omnjoCUmlaYw==
   dependencies:
     classnames "^2.2.6"
@@ -5690,6 +5690,11 @@ react-phone-input-2@^2.15.1:
     lodash.reduce "^4.6.0"
     lodash.startswith "^4.2.1"
     prop-types "^15.7.2"
+
+react-photo-album@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.npmjs.org/react-photo-album/-/react-photo-album-1.16.1.tgz"
+  integrity sha512-RNzqxSpAT7Vg5pOKlAETBCc5mfPwcgGl0DqwW5Z2FH79CDNIJBA/WNqInLVDZ1p4MqOciPrAS8z480tLUDsiYg==
 
 react-select-country-list@^2.2.3:
   version "2.2.3"
@@ -6857,10 +6862,10 @@ yargs@^17.0.0:
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
 
-yet-another-react-lightbox@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.npmjs.org/yet-another-react-lightbox/-/yet-another-react-lightbox-2.2.2.tgz"
-  integrity sha512-LkZ5FcHaWy3S8MN5ART84gkRAE2w0PfNzGKPR3zM6uhOJSFCGO2+TgLyHkhx3KmR/3ZbTbA0ko3HWvs5aU537A==
+yet-another-react-lightbox@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/yet-another-react-lightbox/-/yet-another-react-lightbox-2.2.3.tgz#57746d07c8281a4a6bf69fc66571cde40ef65b77"
+  integrity sha512-wTjXSqcKZfmudXQqZxe24SqzBAaK5x686CMNMAfNOrbmtyUACCrXTM78899DwtkEYMCBAGvgZc/2GOVu+EAtYA==
 
 yn@3.1.1:
   version "3.1.1"
