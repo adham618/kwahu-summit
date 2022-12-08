@@ -8,7 +8,10 @@ const VideoSection = () => {
   return (
     <div className='video-section p-4'>
       <div className='container-fluid'>
-        <button onClick={() => setShowVideoModal(true)} className='video-box'>
+        <button
+          onClick={() => setShowVideoModal(true)}
+          className='video-box tw-border-none'
+        >
           <img src='/images/video-bg.png' alt='video-bg' />
           <span className='play-icon'>
             <img src='/images/icons/play-icon.png' alt='play' />

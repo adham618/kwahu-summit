@@ -18,7 +18,7 @@ export default function AccraPage() {
           <PageShape />
           <Header />
           <HeroSectionSM
-            image='/images/header-bg/accra-bg.png'
+            image='/images/header-bg/accra-bg.jpg'
             name='Accra'
             desc='Event guide'
           />

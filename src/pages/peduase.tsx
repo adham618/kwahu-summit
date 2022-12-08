@@ -18,7 +18,7 @@ export default function PeduasePage() {
           <PageShape />
           <Header />
           <HeroSectionSM
-            image='/images/header-bg/peduase-bg.jpg'
+            image='/images/header-bg/peduase-bg.png'
             name='Peduase'
             desc='Event guide'
           />
