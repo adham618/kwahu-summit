@@ -239,7 +239,7 @@ const RegistrationSection = () => {
                   <PhoneInput
                     value={value}
                     onChange={(value) => onChange(value)}
-                    country='ga'
+                    country='gh'
                     placeholder='PHONE*'
                     inputClass='!tw-w-full focus:!tw-border-black focus:!tw-bg-[unset] focus:tw-shadow-outline'
                     dropdownClass='!tw-w-max'
