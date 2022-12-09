@@ -146,7 +146,7 @@ const Header = () => {
               <div
                 className={`${
                   show
-                    ? 'tw-absolute tw-inset-0 !tw-block tw-min-h-screen tw-w-full tw-bg-[#123150]'
+                    ? 'tw-absolute tw-inset-0 !tw-block tw-h-fit tw-min-h-screen tw-w-full tw-bg-[#123150]'
                     : ''
                 } collapse navbar-collapse`}
               >

@@ -92,12 +92,17 @@ html {
     display: none !important;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   .header-top {
     display: none !important;
   }
+  .nav-link {
+    font-size: 32px !important;
+    font-weight: 500 !important;
+    margin-bottom: 20px !important;
+  }
 }
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 992px) {
   .header-top {
     display: flex !important;
   }
