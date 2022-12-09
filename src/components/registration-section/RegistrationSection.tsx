@@ -271,6 +271,7 @@ const RegistrationSection = () => {
                 rules={registerOptions.nationality}
                 render={({ field: { onChange, value } }) => (
                   <CountryDropdown
+                    defaultOptionLabel='Select Country*'
                     value={value}
                     onChange={(value) => onChange(value)}
                   />
@@ -292,6 +293,8 @@ const RegistrationSection = () => {
                 rules={registerOptions.STATE}
                 render={({ field: { onChange, value } }) => (
                   <RegionDropdown
+                    blankOptionLabel='No country selected, please select one'
+                    defaultOptionLabel='Select State*'
                     country={watch('nationality')}
                     value={value}
                     onChange={(value) => onChange(value)}
