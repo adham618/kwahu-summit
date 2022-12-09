@@ -1,13 +1,11 @@
 import * as React from 'react';
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
-import countryList from 'react-select-country-list';
 
 import 'react-phone-input-2/lib/bootstrap.css';
 
 const RegistrationSection = () => {
-  const options = React.useMemo(() => countryList().getData(), []);
-
   type Inputs = {
     title: string;
     firstName: string;
@@ -25,6 +23,7 @@ const RegistrationSection = () => {
   const {
     register,
     handleSubmit,
+    watch,
     control,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm<Inputs>({ mode: 'onChange' });
@@ -266,22 +265,17 @@ const RegistrationSection = () => {
           <div className='col-md-6'>
             <div className='regi-form'>
               <label htmlFor='nationality'>Nationality*</label>
-              <select
-                {...register('nationality', registerOptions.nationality)}
-                id='nationality'
-                defaultValue=''
-              >
-                <option value='' disabled hidden>
-                  Select country
-                </option>
-                {options.map((option, index) => {
-                  return (
-                    <option key={index} value={option.value}>
-                      {option.label}
-                    </option>
-                  );
-                })}
-              </select>
+              <Controller
+                name='nationality'
+                control={control}
+                rules={registerOptions.nationality}
+                render={({ field: { onChange, value } }) => (
+                  <CountryDropdown
+                    value={value}
+                    onChange={(value) => onChange(value)}
+                  />
+                )}
+              />
               {errors.nationality && (
                 <span className='tw-mt-2 tw-block tw-text-[14px] tw-font-bold tw-leading-5 tw-text-red-500'>
                   {errors.nationality.message}
@@ -292,19 +286,18 @@ const RegistrationSection = () => {
           <div className='col-md-6'>
             <div className='regi-form'>
               <label htmlFor='STATE'>STATE*</label>
-              <select
-                {...register('STATE', registerOptions.STATE)}
-                id='STATE'
-                defaultValue=''
-              >
-                <option value='' disabled hidden>
-                  Select state
-                </option>
-                <option value='1'>Select state</option>
-                <option value='1'>Select state</option>
-                <option value='1'>Select state</option>
-                <option value='1'>Select state</option>
-              </select>
+              <Controller
+                name='STATE'
+                control={control}
+                rules={registerOptions.STATE}
+                render={({ field: { onChange, value } }) => (
+                  <RegionDropdown
+                    country={watch('nationality')}
+                    value={value}
+                    onChange={(value) => onChange(value)}
+                  />
+                )}
+              />
               {errors.STATE && (
                 <span className='tw-mt-2 tw-block tw-text-[14px] tw-font-bold tw-leading-5 tw-text-red-500'>
                   {errors.STATE.message}

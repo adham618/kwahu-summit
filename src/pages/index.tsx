@@ -142,18 +142,16 @@ export default function HomePage() {
       <Seo />
       <main>
         <div className='home-page'>
-          <div className='main-head'>
-            <HeroSection />
-            <About hasDot={true} />
-            <VideoSection image='/images/video-bg.png' videoID='2g811Eo7K8U' />
-            <WhoAttending />
-            <InviteSection data={InvitedHeadsData} hideButton={true} />
-            <NotableSection data={NotableData} hideButton={true} />
-            <KeyTopics />
-            <NewSection />
-            <FAQSection />
-            <SponsorsSection />
-          </div>
+          <HeroSection />
+          <About hasDot={true} />
+          <VideoSection image='/images/video-bg.png' videoID='2g811Eo7K8U' />
+          <WhoAttending />
+          <InviteSection data={InvitedHeadsData} hideButton={true} />
+          <NotableSection data={NotableData} hideButton={true} />
+          <KeyTopics />
+          <NewSection />
+          <FAQSection />
+          <SponsorsSection />
         </div>
       </main>
     </Layout>
