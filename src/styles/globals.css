@@ -63,3 +63,22 @@ html {
   max-width: 90vw !important;
   max-height: 70vh !important;
 }
+/* swiper */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+.swiper-button-next {
+  background: inherit;
+  background-image: url(/svg/next.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+.swiper-button-prev {
+  background: inherit;
+  background-image: url(/svg/prev.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}

@@ -11,15 +11,13 @@ export default function MediaPartnersPage() {
       <Seo templateTitle='Media partners' />
 
       <main>
-        <div className='peduase-page'>
-          <PageShape />
-          <HeroSectionSM
-            image='/images/header-bg/media-partners.png'
-            name='Invited media'
-            desc='About the Summit'
-          />
-          <InvitedMediaSection />
-        </div>
+        <PageShape />
+        <HeroSectionSM
+          image='/images/header-bg/media-partners.png'
+          name='Invited media'
+          desc='About the Summit'
+        />
+        <InvitedMediaSection />
       </main>
     </Layout>
   );
