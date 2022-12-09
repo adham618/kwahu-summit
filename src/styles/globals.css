@@ -92,3 +92,16 @@ html {
     display: none !important;
   }
 }
+@media screen and (max-width: 991px) {
+  .header-top {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 991px) {
+  .header-top {
+    display: flex !important;
+  }
+  .menu-button {
+    display: none !important;
+  }
+}
