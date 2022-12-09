@@ -82,3 +82,7 @@ html {
   background-size: 100% auto;
   background-position: center;
 }
+#__next {
+  max-width: 100%;
+  overflow-x: hidden;
+}
