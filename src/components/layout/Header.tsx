@@ -117,8 +117,8 @@ const Header = () => {
     },
   ];
   return (
-    <div className='main-header'>
-      <div className='container-fluid header-base'>
+    <div className='main-header tw-p-3 lg:tw-px-8 lg:tw-py-4'>
+      <div className='lg:container-fluid header-base'>
         <div className='header-bottom tw-items-center !tw-border-t-0 lg:tw-border-t'>
           <div className='header-left'>
             <div className='logo !tw-w-[147.89px] lg:!tw-w-[210px]'>
@@ -151,7 +151,7 @@ const Header = () => {
                 } collapse navbar-collapse`}
               >
                 {show && (
-                  <div className='tw-flex tw-justify-between tw-p-4'>
+                  <div className='tw-flex tw-justify-between tw-p-3'>
                     <div className='logo !tw-w-[147.89px]'>
                       <Link href='/'>
                         <img
@@ -161,12 +161,14 @@ const Header = () => {
                         />
                       </Link>
                     </div>
-                    <button
-                      onClick={() => setShow(false)}
-                      className='tw-flex tw-h-fit tw-items-center tw-border-2  tw-border-white tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
-                    >
-                      <IoCloseSharp />
-                    </button>
+                    <div className='tw-flex tw-items-center'>
+                      <button
+                        onClick={() => setShow(false)}
+                        className='tw-flex tw-h-fit tw-items-center tw-border-2  tw-border-white tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
+                      >
+                        <IoCloseSharp />
+                      </button>
+                    </div>
                   </div>
                 )}
                 <ul className='navbar-nav'>
