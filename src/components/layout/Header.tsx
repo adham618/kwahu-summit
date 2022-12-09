@@ -3,6 +3,118 @@ import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
+  const links = [
+    {
+      name: 'Home',
+      href: '/',
+    },
+    {
+      name: 'About',
+      href: '/about-summit',
+      subLinks: [
+        {
+          name: 'About the Summit',
+          href: '/about-summit',
+        },
+        {
+          name: 'The host',
+          href: '/the-host',
+        },
+        {
+          name: 'Media partners',
+          href: '/media-partners',
+        },
+        {
+          name: 'Sponsors',
+          href: '/sponsors',
+        },
+        {
+          name: 'Planning committee',
+          href: '/planning-committee',
+        },
+      ],
+    },
+    {
+      name: 'Who is attending',
+      href: '/captains-of-industry',
+      subLinks: [
+        {
+          name: 'Invited Heads of State',
+          href: '/invited-heads-of-state',
+        },
+        {
+          name: 'Invited Personalities',
+          href: '/invited-personalities',
+        },
+      ],
+    },
+    {
+      name: 'Gallery',
+      href: '/gallery',
+    },
+    {
+      name: 'Resources',
+      href: '/news',
+      subLinks: [
+        {
+          name: 'News',
+          href: '/news',
+        },
+        {
+          name: 'The AfCFTA',
+          href: '/the-afcfta',
+        },
+        {
+          name: 'The AU Agenda 2063',
+          href: '/agenda',
+        },
+      ],
+    },
+    {
+      name: 'Event guide',
+      href: '/peduase',
+      subLinks: [
+        {
+          name: 'Peduase',
+          href: '/peduase',
+        },
+        {
+          name: 'Accra',
+          href: '/accra',
+        },
+        {
+          name: 'Protocols',
+          href: '/protocols',
+        },
+      ],
+    },
+    {
+      name: 'Help',
+      href: '/help',
+    },
+  ];
+  const socialLinks = [
+    {
+      name: 'Facebook',
+      href: '#',
+      icon: '/images/socials/facebook.svg',
+    },
+    {
+      name: 'Twitter',
+      href: '#',
+      icon: '/images/socials/twitter.svg',
+    },
+    {
+      name: 'Linkedin',
+      href: '#',
+      icon: '/images/socials/linkedin.svg',
+    },
+    {
+      name: 'Instagram',
+      href: '#',
+      icon: '/images/socials/instagram.svg',
+    },
+  ];
   return (
     <div className='main-header'>
       <div className='container-fluid header-base'>
@@ -26,151 +138,42 @@ const Header = () => {
             <nav className='navbar navbar-expand-lg'>
               <div className='collapse navbar-collapse'>
                 <ul className='navbar-nav'>
-                  <li className='nav-item'>
-                    <Link
-                      href='/'
-                      className='nav-link active'
-                      aria-current='page'
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li className='nav-item dropdown'>
-                    <a
-                      className='nav-link dropdown-toggle'
-                      role='button'
-                      data-bs-toggle='dropdown'
-                      aria-expanded='false'
-                    >
-                      About
-                    </a>
-                    <ul className='dropdown-menu'>
-                      <li>
-                        <Link className='dropdown-item' href='/about-summit'>
-                          About the Summit
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className='dropdown-item' href='/the-host'>
-                          The host
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className='dropdown-item' href='/media-partners'>
-                          Media partners
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className='dropdown-item' href='/sponsors'>
-                          Sponsors
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className='dropdown-item'
-                          href='/planning-committee'
+                  {links.map((link) => (
+                    <li className='nav-item dropdown' key={link.name}>
+                      {link.subLinks ? (
+                        <a
+                          className='nav-link dropdown-toggle'
+                          role='button'
+                          data-bs-toggle='dropdown'
+                          aria-expanded='false'
                         >
-                          Planning committee
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className='nav-item dropdown'>
-                    <a
-                      className='nav-link dropdown-toggle'
-                      role='button'
-                      data-bs-toggle='dropdown'
-                      aria-expanded='false'
-                    >
-                      Who is attending
-                    </a>
-                    <ul className='dropdown-menu'>
-                      <li>
+                          {link.name}
+                        </a>
+                      ) : (
                         <Link
-                          className='dropdown-item'
-                          href='/invited-heads-of-state'
+                          href={link.href}
+                          className='nav-link active'
+                          aria-current='page'
                         >
-                          Invited Heads of State
+                          {link.name}
                         </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className='dropdown-item'
-                          href='/invited-personalities'
-                        >
-                          Invited Personalities
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className='nav-item'>
-                    <Link
-                      href='/gallery'
-                      className='nav-link active'
-                      aria-current='page'
-                    >
-                      Gallery
-                    </Link>
-                  </li>
-                  <li className='nav-item dropdown'>
-                    <a
-                      className='nav-link dropdown-toggle'
-                      role='button'
-                      data-bs-toggle='dropdown'
-                      aria-expanded='false'
-                    >
-                      Resources
-                    </a>
-                    <ul className='dropdown-menu'>
-                      <li>
-                        <Link className='dropdown-item' href='/news'>
-                          News
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className='dropdown-item' href='/the-afcfta'>
-                          The AfCFTA
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className='dropdown-item' href='/agenda'>
-                          The AU Agenda 2063
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className='nav-item dropdown'>
-                    <a
-                      className='nav-link dropdown-toggle'
-                      role='button'
-                      data-bs-toggle='dropdown'
-                      aria-expanded='false'
-                    >
-                      Event guide
-                    </a>
-                    <ul className='dropdown-menu'>
-                      <li>
-                        <Link className='dropdown-item' href='/peduase'>
-                          Peduase
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className='dropdown-item' href='/accra'>
-                          Accra
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className='dropdown-item' href='/protocols'>
-                          Protocols
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className='nav-item'>
-                    <Link className='nav-link' aria-current='page' href='/help'>
-                      Help
-                    </Link>
-                  </li>
+                      )}
+                      {link.subLinks && (
+                        <ul className='dropdown-menu'>
+                          {link.subLinks.map((subLink) => (
+                            <li key={subLink.name}>
+                              <Link
+                                className='dropdown-item'
+                                href={subLink.href}
+                              >
+                                {subLink.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </nav>
@@ -245,18 +248,11 @@ const Header = () => {
               </ul>
             </div>
             <div className='social-profiles'>
-              <Link href='/'>
-                <img src='/images/socials/facebook.svg' alt='FacebookIcon' />
-              </Link>
-              <Link href='/'>
-                <img src='/images/socials/twitter.svg' alt='TwitterIcon' />
-              </Link>
-              <Link href='/'>
-                <img src='/images/socials/linkedin.svg' alt='LinkedinIcon' />
-              </Link>
-              <Link href='/'>
-                <img src='/images/socials/instagram.svg' alt='InstagramIcon' />
-              </Link>
+              {socialLinks.map((socialLink, index) => (
+                <Link key={index} href={socialLink.href}>
+                  <img src={socialLink.icon} alt={socialLink.name} />
+                </Link>
+              ))}
             </div>
           </div>
         </div>
