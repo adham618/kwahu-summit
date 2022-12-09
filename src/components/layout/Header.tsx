@@ -139,7 +139,7 @@ const Header = () => {
             <nav className='navbar navbar-expand-lg tw-static'>
               <button
                 onClick={() => setShow(true)}
-                className='menu-button tw-flex tw-h-fit tw-items-center tw-border-2 tw-border-white  tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
+                className='tw-flex tw-h-fit tw-items-center !tw-border-2 tw-border-solid !tw-border-white  tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
               >
                 <IoMenuOutline />
               </button>
@@ -209,6 +209,18 @@ const Header = () => {
                     </li>
                   ))}
                 </ul>
+                {show && (
+                  <>
+                    <div className='tw-p-3 md:tw-px-8 md:tw-py-4'>
+                      <Link
+                        href='/registration'
+                        className='tw-mt-3 tw-inline-block tw-border-2 tw-border-solid tw-border-white tw-py-2 tw-px-6 tw-text-base tw-font-semibold tw-text-white'
+                      >
+                        Register
+                      </Link>
+                    </div>
+                  </>
+                )}
               </div>
             </nav>
           </div>
