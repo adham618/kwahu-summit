@@ -1,7 +1,76 @@
 import Link from 'next/link';
 import React from 'react';
 
+import GallerySection from '../gallery-section/GallerySection';
+
 const NewsDetailSection2 = () => {
+  const photos = [
+    {
+      src: '/images/news/gallery/1.png',
+      width: 329.5,
+      height: 331.49,
+    },
+    {
+      src: '/images/news/gallery/2.png',
+      width: 329.5,
+      height: 161.58,
+    },
+    {
+      src: '/images/news/gallery/3.png',
+      width: 160.63,
+      height: 161.58,
+    },
+    {
+      src: '/images/news/gallery/4.png',
+      width: 329.5,
+      height: 329.5,
+    },
+    {
+      src: '/images/news/gallery/5.png',
+      width: 160.63,
+      height: 331.49,
+    },
+    {
+      src: '/images/news/gallery/6.png',
+      width: 160.63,
+      height: 330.91,
+    },
+    {
+      src: '/images/news/gallery/7.png',
+      width: 329.5,
+      height: 161.58,
+    },
+    {
+      src: '/images/news/gallery/8.png',
+      width: 326.65,
+      height: 328.62,
+    },
+    {
+      src: '/images/news/gallery/9.png',
+      width: 326.65,
+      height: 328.62,
+    },
+    {
+      src: '/images/news/gallery/10.png',
+      width: 328.71,
+      height: 161.58,
+    },
+    {
+      src: '/images/news/gallery/11.png',
+      width: 160.63,
+      height: 161.58,
+    },
+    {
+      src: '/images/news/gallery/12.png',
+      width: 329.5,
+      height: 331.49,
+    },
+    {
+      src: '/images/news/gallery/13.png',
+      width: 160.63,
+      height: 331.61,
+    },
+  ];
   return (
     <div className='text-title-section'>
       <div className='container-fluid'>
@@ -137,7 +206,7 @@ const NewsDetailSection2 = () => {
                   more,” he declared.
                 </p>
               </div>
-              <div className='gallery-section'>Gallery</div>
+              <GallerySection photos={photos} />
               <div className='desc-card'>
                 <p>BACKGROUND</p>
                 <p>

@@ -7,14 +7,15 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
-import { photos } from './photos';
-
-const slides = photos.map(({ src, width, height }) => ({
-  src: src,
-  width,
-  height,
-}));
-const GallerySection = () => {
+type GallerySectionProps = {
+  photos: {
+    src: string;
+    width: number;
+    height: number;
+  }[];
+  direction?: 'row' | 'column';
+};
+const GallerySection = ({ photos, direction = 'row' }: GallerySectionProps) => {
   const [index, setIndex] = useState(-1);
 
   const openLightbox = React.useCallback(
@@ -24,9 +25,14 @@ const GallerySection = () => {
     },
     []
   );
+  const slides = photos.map(({ src, width, height }) => ({
+    src: src,
+    width,
+    height,
+  }));
   return (
     <div className='gallery-section'>
-      <Gallery photos={photos} onClick={openLightbox} />
+      <Gallery photos={photos} onClick={openLightbox} direction={direction} />
 
       <Lightbox
         styles={{ root: { '--yarl__color_backdrop': 'rgba(0, 0, 0, .8)' } }}
