@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React from 'react';
-
+import { IoCloseSharp, IoMenuOutline } from 'react-icons/io5';
 const Header = () => {
+  const [show, setShow] = React.useState(false);
   const links = [
     {
       name: 'Home',
@@ -118,9 +119,9 @@ const Header = () => {
   return (
     <div className='main-header'>
       <div className='container-fluid header-base'>
-        <div className='header-bottom tw-items-center'>
+        <div className='header-bottom tw-items-center !tw-border-t-0 lg:tw-border-t'>
           <div className='header-left'>
-            <div className='logo'>
+            <div className='logo !tw-w-[147.89px] lg:!tw-w-[210px]'>
               <Link href='/'>
                 <img src='/images/logo.png' alt='logo' />
               </Link>
@@ -135,8 +136,39 @@ const Header = () => {
             </div>
           </div>
           <div className='header-right'>
-            <nav className='navbar navbar-expand-lg'>
-              <div className='collapse navbar-collapse'>
+            <nav className='navbar navbar-expand-lg tw-static'>
+              <button
+                onClick={() => setShow(true)}
+                className='tw-flex tw-items-center tw-border-2 tw-border-white  tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white lg:tw-hidden'
+              >
+                <IoMenuOutline />
+              </button>
+              <div
+                className={`${
+                  show
+                    ? 'tw-absolute tw-inset-0 !tw-block tw-min-h-screen tw-w-full tw-bg-[#123150]'
+                    : ''
+                } collapse navbar-collapse`}
+              >
+                {show && (
+                  <div className='tw-flex tw-justify-between tw-p-4'>
+                    <div className='logo !tw-w-[147.89px]'>
+                      <Link href='/'>
+                        <img
+                          className='tw-max-w-full'
+                          src='/images/logo.png'
+                          alt='logo'
+                        />
+                      </Link>
+                    </div>
+                    <button
+                      onClick={() => setShow(false)}
+                      className='tw-flex tw-h-fit tw-items-center tw-border-2  tw-border-white tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
+                    >
+                      <IoCloseSharp />
+                    </button>
+                  </div>
+                )}
                 <ul className='navbar-nav'>
                   {links.map((link) => (
                     <li className='nav-item dropdown' key={link.name}>
@@ -179,7 +211,7 @@ const Header = () => {
             </nav>
           </div>
         </div>
-        <div className='header-top'>
+        <div className='header-top !tw-hidden lg:tw-block'>
           <div className='header-date'>
             <p>January 26th - 28th 2023</p>
           </div>
