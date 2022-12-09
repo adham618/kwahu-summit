@@ -13,7 +13,7 @@ export default function NewDetailPage3() {
 
       <main>
         <div className='news-detail-page'>
-          <PageShape />]{' '}
+          <PageShape />
           <HeroSectionSM
             image='/images/header-bg/news-bg-3.png'
             name='Kwahu summit launched – Ghana to host Africa’s prosperity dialogues'

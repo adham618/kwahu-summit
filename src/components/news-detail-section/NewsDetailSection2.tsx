@@ -206,7 +206,9 @@ const NewsDetailSection2 = () => {
                   more,” he declared.
                 </p>
               </div>
-              <GallerySection photos={photos} />
+              <div className='layout tw-py-24'>
+                <GallerySection photos={photos} />
+              </div>
               <div className='desc-card'>
                 <p>BACKGROUND</p>
                 <p>
