@@ -8,18 +8,18 @@ const Footer = () => {
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-12'>
-            <div className='footer-top'>
-              <div className='footer-newsletter'>
+            <div className='footer-top tw-flex-col-reverse !tw-items-start lg:!tw-flex-row lg:tw-items-end'>
+              <div className='footer-newsletter tw-w-full'>
                 <h3>Stay connected</h3>
                 <div className='newsletter-box'>
                   <span>Your email</span>
-                  <div className='d-flex'>
+                  <div className='d-flex tw-flex-col sm:tw-flex-row'>
                     <input
-                      className='form-control'
+                      className='form-control !tw-w-full sm:!tw-w-[320px]'
                       type='text'
                       placeholder='example@site.com'
                     />
-                    <button className='btn btn-submit btn-secondary'>
+                    <button className='btn btn-submit btn-secondary tw-mt-5 !tw-w-full sm:tw-mt-0 sm:!tw-w-[152px]'>
                       Submit
                     </button>
                   </div>
@@ -33,10 +33,11 @@ const Footer = () => {
           <div className='col-md-12'>
             <div className='footer-center'>
               <div className='row'>
-                <div className='col-md-9'>
-                  <div className='footer-links w-full !tw-grid tw-flex-none tw-auto-rows-auto tw-grid-cols-5'>
+                <div className='col-12 col-md-9'>
+                  <div className='footer-links w-full !tw-grid tw-flex-none tw-auto-rows-auto tw-grid-cols-2 lg:tw-grid-cols-5'>
                     <div className='footer-link-item m-0'>
-                      <h3>&nbsp;</h3>
+                      <h3 className='lg:tw-hidden'>About</h3>
+                      <h3 className='tw-hidden lg:tw-block'>&nbsp;</h3>
                       <ul>
                         <li>
                           <Link href='/'>The Host</Link>
@@ -106,7 +107,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3'>
+                <div className='col-12 col-md-3'>
                   <div className='footer-copy'>
                     <ul>
                       <li>
@@ -144,8 +145,8 @@ const Footer = () => {
             </div>
           </div>
           <div className='col-md-12'>
-            <div className='footer-bottom'>
-              <p>
+            <div className='footer-bottom !tw-mt-0 md:!tw-mt-[35px]'>
+              <p className='tw-text-left md:tw-text-center'>
                 Developed by <Link href='/'>Peges Inc</Link>
               </p>
             </div>
