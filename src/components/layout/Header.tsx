@@ -139,7 +139,7 @@ const Header = () => {
             <nav className='navbar navbar-expand-lg tw-static'>
               <button
                 onClick={() => setShow(true)}
-                className='tw-flex tw-h-fit tw-items-center !tw-border-2 tw-border-solid !tw-border-white  tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
+                className='menu-button tw-flex tw-h-fit tw-items-center !tw-border-2 tw-border-solid !tw-border-white  tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
               >
                 <IoMenuOutline />
               </button>
