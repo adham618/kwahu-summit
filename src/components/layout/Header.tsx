@@ -117,11 +117,11 @@ const Header = () => {
     },
   ];
   return (
-    <div className='main-header tw-p-3 lg:tw-px-8 lg:tw-py-4'>
-      <div className='lg:container-fluid header-base'>
-        <div className='header-bottom tw-items-center !tw-border-t-0 lg:tw-border-t'>
+    <div className='main-header tw-p-3 md:tw-px-8 md:tw-py-4'>
+      <div className='md:container-fluid header-base'>
+        <div className='header-bottom tw-items-center !tw-border-t-0 md:tw-border-t'>
           <div className='header-left'>
-            <div className='logo !tw-w-[147.89px] lg:!tw-w-[210px]'>
+            <div className='logo !tw-w-[147.89px] md:!tw-w-[210px]'>
               <Link href='/'>
                 <img src='/images/logo.png' alt='logo' />
               </Link>
@@ -139,7 +139,7 @@ const Header = () => {
             <nav className='navbar navbar-expand-lg tw-static'>
               <button
                 onClick={() => setShow(true)}
-                className='tw-flex tw-items-center tw-border-2 tw-border-white  tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white lg:tw-hidden'
+                className='tw-flex tw-items-center tw-border-2 tw-border-white  tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white md:tw-hidden'
               >
                 <IoMenuOutline />
               </button>
@@ -213,7 +213,7 @@ const Header = () => {
             </nav>
           </div>
         </div>
-        <div className='header-top !tw-hidden lg:tw-block'>
+        <div className='header-top !tw-hidden md:!tw-flex'>
           <div className='header-date'>
             <p>January 26th - 28th 2023</p>
           </div>
