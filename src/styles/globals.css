@@ -99,7 +99,15 @@ html {
   .nav-link {
     font-size: 32px !important;
     font-weight: 500 !important;
+  }
+  .nav-item {
     margin-bottom: 20px !important;
+  }
+  nav .dropdown-menu {
+    @apply tw-mt-1 tw-border-none tw-bg-[unset];
+  }
+  nav .dropdown-menu .dropdown-item {
+    @apply tw-mb-2 tw-px-5 tw-text-xl tw-text-[#9CA69C];
   }
 }
 @media screen and (min-width: 992px) {
