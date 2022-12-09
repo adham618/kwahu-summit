@@ -151,8 +151,8 @@ const Header = () => {
                 } collapse navbar-collapse`}
               >
                 {show && (
-                  <div className='tw-flex tw-justify-between tw-p-3'>
-                    <div className='logo !tw-w-[147.89px]'>
+                  <div className='tw-flex tw-justify-between tw-p-3 md:tw-px-8 md:tw-py-4'>
+                    <div className='logo !tw-w-[147.89px] md:!tw-w-[210px]'>
                       <Link href='/'>
                         <img
                           className='tw-max-w-full'
