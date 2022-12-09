@@ -116,6 +116,32 @@ const Header = () => {
       icon: '/images/socials/instagram.svg',
     },
   ];
+  const languages = [
+    {
+      name: 'English',
+      flag: '/images/flags/english.svg',
+    },
+    {
+      name: 'Arabic',
+      flag: '/images/flags/arabic.svg',
+    },
+    {
+      name: 'French',
+      flag: '/images/flags/french.svg',
+    },
+    {
+      name: 'German',
+      flag: '/images/flags/germany.svg',
+    },
+    {
+      name: 'Portuguese',
+      flag: '/images/flags/portuguese.svg',
+    },
+    {
+      name: 'Spanish',
+      flag: '/images/flags/spain.svg',
+    },
+  ];
   return (
     <div className='main-header tw-p-3 md:tw-px-8 md:tw-py-4'>
       <div className='md:container-fluid header-base'>
@@ -151,23 +177,25 @@ const Header = () => {
                 } collapse navbar-collapse`}
               >
                 {show && (
-                  <div className='tw-flex tw-justify-between tw-p-3 md:tw-px-8 md:tw-py-4'>
-                    <div className='logo !tw-w-[147.89px] md:!tw-w-[210px]'>
-                      <Link href='/'>
-                        <img
-                          className='tw-max-w-full'
-                          src='/images/logo.png'
-                          alt='logo'
-                        />
-                      </Link>
-                    </div>
-                    <div className='tw-flex tw-items-center'>
-                      <button
-                        onClick={() => setShow(false)}
-                        className='tw-flex tw-h-fit tw-items-center tw-border-2  tw-border-white tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
-                      >
-                        <IoCloseSharp />
-                      </button>
+                  <div className='tw-mb-4 tw-p-3 md:tw-px-8 md:tw-py-4'>
+                    <div className='tw-flex tw-justify-between tw-border-0 tw-border-b-2 tw-border-solid tw-border-white tw-pb-3 '>
+                      <div className='logo !tw-w-[147.89px] md:!tw-w-[210px]'>
+                        <Link href='/'>
+                          <img
+                            className='tw-max-w-full'
+                            src='/images/logo.png'
+                            alt='logo'
+                          />
+                        </Link>
+                      </div>
+                      <div className='tw-flex tw-items-center'>
+                        <button
+                          onClick={() => setShow(false)}
+                          className='tw-flex tw-h-fit tw-items-center tw-border-2  tw-border-white tw-bg-[unset] tw-py-[3px] tw-px-1 tw-text-[25px] tw-text-white'
+                        >
+                          <IoCloseSharp />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -214,10 +242,57 @@ const Header = () => {
                     <div className='tw-p-3 md:tw-px-8 md:tw-py-4'>
                       <Link
                         href='/registration'
-                        className='tw-mt-3 tw-inline-block tw-border-2 tw-border-solid tw-border-white tw-py-2 tw-px-6 tw-text-base tw-font-semibold tw-text-white'
+                        className='tw-mt-3 tw-inline-block tw-border-2 tw-border-solid tw-border-white tw-py-1 tw-px-6 tw-text-base tw-font-semibold tw-text-white'
                       >
                         Register
                       </Link>
+                    </div>
+                    <div className='tw-p-3 md:tw-px-8 md:tw-py-4'>
+                      <div className='pt-3 tw-flex tw-justify-between tw-border-0 tw-border-t-2 tw-border-solid tw-border-white'>
+                        <div className='language-dropdown dropdown'>
+                          <button
+                            className='btn text-white btn-flat dropdown-toggle'
+                            type='button'
+                            data-bs-toggle='dropdown'
+                            aria-expanded='false'
+                          >
+                            <span className='flag-icon tw-flex'>
+                              <img src='/images/flags/english.svg' alt='eng' />
+                            </span>
+                            <span className='language-name tw-font-bold'>
+                              English
+                            </span>
+                          </button>
+                          <ul className='dropdown-menu'>
+                            {languages.map((language) => (
+                              <li key={language.name}>
+                                <button className='dropdown-item'>
+                                  <span className='flag-icon'>
+                                    <img
+                                      src={language.flag}
+                                      alt={language.name}
+                                    />
+                                  </span>
+                                  <span className='language-name'>
+                                    {language.name}
+                                  </span>
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className='social-profiles tw-space-x-6'>
+                          {socialLinks.map((socialLink, index) => (
+                            <Link key={index} href={socialLink.href}>
+                              <img
+                                className='tw-h-4 tw-w-4'
+                                src={socialLink.icon}
+                                alt={socialLink.name}
+                              />
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </>
                 )}
@@ -243,54 +318,16 @@ const Header = () => {
                 <span className='language-name tw-font-bold'>English</span>
               </button>
               <ul className='dropdown-menu'>
-                <li>
-                  <Link className='dropdown-item' href='/'>
-                    <span className='flag-icon'>
-                      <img src='/images/flags/english.svg' alt='eng' />
-                    </span>
-                    <span className='language-name'>English</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link className='dropdown-item' href='/'>
-                    <span className='flag-icon'>
-                      <img src='/images/flags/arabic.svg' alt='ara' />
-                    </span>
-                    <span className='language-name'>Arabic</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link className='dropdown-item' href='/'>
-                    <span className='flag-icon'>
-                      <img src='/images/flags/french.svg' alt='fr' />
-                    </span>
-                    <span className='language-name'>French</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link className='dropdown-item' href='/'>
-                    <span className='flag-icon'>
-                      <img src='/images/flags/germany.svg' alt='ge' />
-                    </span>
-                    <span className='language-name'>German</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link className='dropdown-item' href='/'>
-                    <span className='flag-icon'>
-                      <img src='/images/flags/portuguese.svg' alt='port' />
-                    </span>
-                    <span className='language-name'>Portuguese</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link className='dropdown-item' href='/'>
-                    <span className='flag-icon'>
-                      <img src='/images/flags/spain.svg' alt='sp' />
-                    </span>
-                    <span className='language-name'>Spanish</span>
-                  </Link>
-                </li>
+                {languages.map((language) => (
+                  <li key={language.name}>
+                    <button className='dropdown-item'>
+                      <span className='flag-icon'>
+                        <img src={language.flag} alt={language.name} />
+                      </span>
+                      <span className='language-name'>{language.name}</span>
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className='social-profiles'>
