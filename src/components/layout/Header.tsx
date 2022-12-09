@@ -118,14 +118,14 @@ const Header = () => {
   return (
     <div className='main-header'>
       <div className='container-fluid header-base'>
-        <div className='header-bottom'>
+        <div className='header-bottom tw-items-center'>
           <div className='header-left'>
             <div className='logo'>
               <Link href='/'>
                 <img src='/images/logo.png' alt='logo' />
               </Link>
             </div>
-            <div className='register-button'>
+            <div className='register-button tw-hidden lg:tw-block'>
               <Link
                 href='/registration'
                 className='btn btn-outline-light !tw-flex'
