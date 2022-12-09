@@ -4,10 +4,12 @@ import YouTube, { YouTubeProps } from 'react-youtube';
 type VideoModalProps = {
   showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  videoID: string;
 };
 export default function VideoModal({
   showModal,
   setShowModal,
+  videoID,
 }: VideoModalProps) {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
     // access to player in all event handlers via event.target
@@ -33,7 +35,7 @@ export default function VideoModal({
           <div className='tw-fixed tw-left-1/2 tw-top-1/2 tw-z-[99999] tw-h-[470px] tw-max-h-[90vh] tw-w-[1086px] tw-max-w-[90%] tw--translate-x-1/2  tw--translate-y-1/2 tw-transform sm:tw-h-[600px]'>
             <YouTube
               className='tw-h-full tw-w-full tw-object-cover'
-              videoId='2g811Eo7K8U'
+              videoId={videoID}
               opts={opts}
               onReady={onPlayerReady}
             />

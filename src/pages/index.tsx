@@ -145,7 +145,7 @@ export default function HomePage() {
           <div className='main-head'>
             <HeroSection />
             <About hasDot={true} />
-            <VideoSection />
+            <VideoSection image='/images/video-bg.png' videoID='2g811Eo7K8U' />
             <WhoAttending />
             <InviteSection data={InvitedHeadsData} hideButton={true} />
             <NotableSection data={NotableData} hideButton={true} />

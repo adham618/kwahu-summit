@@ -22,7 +22,7 @@ export default function AboutSummitPage() {
             desc='About the summit'
           />
           <About hasDot={false} />
-          <VideoSection />
+          <VideoSection image='/images/video-bg.png' videoID='2g811Eo7K8U' />
           <ObjectivesSection />
         </div>
       </main>
