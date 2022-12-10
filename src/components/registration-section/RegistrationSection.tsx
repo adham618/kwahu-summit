@@ -351,7 +351,7 @@ const RegistrationSection = () => {
             <div className='regi-form'>
               <label htmlFor='STATE'>I will attend:*</label>
             </div>
-            <div className='regi-form regi-checkbox mb-0 !tw-items-start sm:!tw-items-center'>
+            <div className='regi-form regi-checkbox mb-2 !tw-items-start sm:!tw-items-center'>
               <input
                 className='tw-mr-2.5 tw-h-4 tw-w-4 tw-cursor-pointer tw-rounded-[2px] !tw-border-2 tw-border-solid !tw-border-[#00A139] tw-text-[#00A139] tw-ring-offset-0 focus:tw-shadow-none focus:tw-ring-0 focus:tw-ring-offset-0'
                 type='checkbox'
