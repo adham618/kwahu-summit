@@ -4,10 +4,10 @@ import SectionHeader from '../section-header/SectionHeader';
 
 const FAQSection = () => {
   return (
-    <div className='faq-section'>
+    <div className='faq-section tw-p-0'>
       <SectionHeader title='Frequently Asked Questions' />
       <div className='faq-block'>
-        <div className='container'>
+        <div className='layout'>
           <div className='row'>
             <div className='col-md-8 offset-md-2'>
               <div className='accordion' id='accordionExample'>

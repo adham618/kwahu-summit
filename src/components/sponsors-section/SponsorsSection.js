@@ -65,7 +65,7 @@ const SponsorsSection = () => {
         {sponsor_lists.map((sponsor, index) => (
           <div className='sponsor-item' key={index}>
             <p>{sponsor.name}</p>
-            <div className='sponsor-icons'>
+            <div className='sponsor-icons tw-flex tw-flex-wrap tw-space-y-5'>
               {sponsor.icons.map((icon, index) => (
                 <div className='sponsor-icon' key={index}>
                   <img
