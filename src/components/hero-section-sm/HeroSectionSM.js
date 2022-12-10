@@ -11,7 +11,9 @@ const HeroSectionSM = (props) => {
             <div className='row'>
               <div className='col-md-12'>
                 <div className='content'>
-                  <h3>{props.name}</h3>
+                  <h3 className='!tw-text-2xl lg:!tw-text-[64px]'>
+                    {props.name}
+                  </h3>
                   <p>{props.desc}</p>
                 </div>
               </div>
