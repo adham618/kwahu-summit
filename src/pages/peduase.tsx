@@ -19,7 +19,7 @@ export default function PeduasePage() {
             name='Peduase'
             desc='Event guide'
           />
-          <div className='p-4'>
+          <div className='lg:p-4'>
             <CardAddress
               title='Presidential & Business Executives’ Dialogues'
               date='28 january'

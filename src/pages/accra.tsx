@@ -19,7 +19,7 @@ export default function AccraPage() {
             name='Accra'
             desc='Event guide'
           />
-          <div className='p-4'>
+          <div className='lg:p-4'>
             <CardAddress
               title='Welcome reception'
               date='27 January (Evening)'
