@@ -5,7 +5,7 @@ import SectionHeader from '../section-header/SectionHeader';
 
 const PlanningCommitteSection = () => {
   return (
-    <div className='planning-committee-section p-4'>
+    <div className='planning-committee-section'>
       <SectionHeader title='Planning Committee' />
       <div className='desc'>
         <p>
@@ -14,7 +14,7 @@ const PlanningCommitteSection = () => {
         </p>
       </div>
       <div className='planning-sec-box'>
-        <div className='container-fluid'>
+        <div className='layout'>
           <div className='row'>
             <div className='col-md-4'>
               <CardPlCommitte
