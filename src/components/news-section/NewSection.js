@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 import React from 'react';
 
 import CardNews from '../card-news/CardNews';
@@ -49,14 +50,17 @@ const NewsSection = () => {
           <div className='row justify-content-end'>
             <div className='col-md-4'>
               <div className='view-more-news'>
-                <button className='btn view-all-news btn-link'>
+                <Link
+                  href='/news'
+                  className='btn view-all-news btn-link hover:tw-underline'
+                >
                   View all news
                   <img
                     className='arrow-right tw-object-fill'
                     src='/images/green-arrow-right.png'
                     alt='arrow right'
                   />
-                </button>
+                </Link>
               </div>
             </div>
           </div>
