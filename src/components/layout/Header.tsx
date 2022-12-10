@@ -172,12 +172,12 @@ const Header = () => {
               <div
                 className={`${
                   show
-                    ? 'tw-absolute tw-inset-0 !tw-block tw-h-fit tw-min-h-screen tw-w-full tw-bg-[#123150]'
+                    ? 'tw-absolute tw-inset-0 !tw-flex tw-h-fit tw-min-h-screen tw-w-full tw-flex-col tw-items-start tw-bg-[#123150]'
                     : ''
                 } collapse navbar-collapse`}
               >
                 {show && (
-                  <div className='tw-mb-4 tw-p-3 md:tw-px-8 md:tw-py-4'>
+                  <div className='tw-mb-4 tw-w-full tw-p-3 md:tw-px-8 md:tw-py-4'>
                     <div className='tw-flex tw-justify-between tw-border-0 tw-border-b-2 tw-border-solid tw-border-white tw-pb-3 '>
                       <div className='logo !tw-w-[147.89px] md:!tw-w-[210px]'>
                         <Link href='/'>
@@ -199,7 +199,7 @@ const Header = () => {
                     </div>
                   </div>
                 )}
-                <ul className='navbar-nav'>
+                <ul className={`${show ? 'tw-flex-grow' : ''} navbar-nav`}>
                   {links.map((link) => (
                     <li className='nav-item dropdown' key={link.name}>
                       {link.subLinks ? (
@@ -239,7 +239,7 @@ const Header = () => {
                 </ul>
                 {show && (
                   <>
-                    <div className='tw-p-3 md:tw-px-8 md:tw-py-4'>
+                    <div className='tw-w-full tw-p-3 md:tw-px-8 md:tw-py-4'>
                       <Link
                         href='/registration'
                         className='tw-mt-3 tw-inline-block tw-border-2 tw-border-solid tw-border-white tw-py-1 tw-px-6 tw-text-base tw-font-semibold tw-text-white'
@@ -247,7 +247,7 @@ const Header = () => {
                         Register
                       </Link>
                     </div>
-                    <div className='tw-p-3 md:tw-px-8 md:tw-py-4'>
+                    <div className='tw-w-full tw-p-3 md:tw-px-8 md:tw-py-4'>
                       <div className='pt-3 tw-flex tw-justify-between tw-border-0 tw-border-t-2 tw-border-solid tw-border-white'>
                         <div className='language-dropdown dropdown'>
                           <button
@@ -263,7 +263,11 @@ const Header = () => {
                               English
                             </span>
                           </button>
-                          <ul className='dropdown-menu'>
+                          <ul
+                            className={`${
+                              show ? 'tw-bottom-[50px] !tw-bg-white' : ''
+                            } dropdown-menu`}
+                          >
                             {languages.map((language) => (
                               <li key={language.name}>
                                 <button className='dropdown-item'>
@@ -273,7 +277,7 @@ const Header = () => {
                                       alt={language.name}
                                     />
                                   </span>
-                                  <span className='language-name'>
+                                  <span className='language-name tw-text-black'>
                                     {language.name}
                                   </span>
                                 </button>
