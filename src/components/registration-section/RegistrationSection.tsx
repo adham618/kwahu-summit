@@ -107,8 +107,11 @@ const RegistrationSection = () => {
     },
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='registration-section'>
-      <div className='container-fluid'>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className='registration-section tw-px-0 lg:tw-py-10 lg:tw-px-[70px]'
+    >
+      <div className='layout'>
         <div className='row'>
           <div className='col-md-12'>
             <div className='registration-head'>
