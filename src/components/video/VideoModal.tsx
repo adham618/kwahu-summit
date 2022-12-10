@@ -32,9 +32,9 @@ export default function VideoModal({
             onClick={() => setShowModal(false)}
             className='top-[-200px] tw-fixed tw-inset-0 tw-z-[9999] tw-min-h-screen tw-cursor-pointer tw-bg-black/50 tw-transition-all tw-duration-300'
           ></div>
-          <div className='tw-fixed tw-left-1/2 tw-top-1/2 tw-z-[99999] tw-h-[470px] tw-max-h-[90vh] tw-w-[1086px] tw-max-w-[90%] tw--translate-x-1/2  tw--translate-y-1/2 tw-transform sm:tw-h-[600px]'>
+          <div className='tw-fixed tw-left-1/2 tw-top-1/2 tw-z-[99999] tw-h-[300px] tw-max-h-[90vh] tw-w-[1086px] tw-max-w-[90%] tw--translate-x-1/2  tw--translate-y-1/2 tw-transform sm:tw-h-[600px]'>
             <YouTube
-              className='tw-h-full tw-w-full tw-object-cover'
+              className='tw-h-full tw-w-full'
               videoId={videoID}
               opts={opts}
               onReady={onPlayerReady}

@@ -4,8 +4,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className='footer-section p-4'>
-      <div className='container-fluid'>
+    <div className='footer-section'>
+      <div className='layout'>
         <div className='row'>
           <div className='col-md-12'>
             <div className='footer-top tw-flex-col-reverse !tw-items-start lg:!tw-flex-row lg:tw-items-end'>
