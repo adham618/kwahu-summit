@@ -47,14 +47,14 @@ const news = [
 
 const NewsAll = () => {
   return (
-    <div className='news-all p-4'>
+    <div className='news-all'>
       <SectionHeader title='News' />
       <div className='news-all-box'>
-        <div className='container-fluid'>
-          <div className='row'>
+        <div className='layout'>
+          <div className='tw-grid tw-grid-cols-1 tw-gap-6 md:tw-grid-cols-2 lg:tw-grid-cols-3'>
             {news.map((item, index) => {
               return (
-                <div key={index} className='col-md-4'>
+                <div key={index}>
                   <CardNews
                     image={item.image}
                     title={item.title}
