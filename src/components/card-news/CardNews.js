@@ -4,7 +4,7 @@ import React from 'react';
 
 const CardNews = (props) => {
   return (
-    <div className='card-news'>
+    <div className='card-news tw-mx-auto tw-max-w-[415px]'>
       <div className='cover'>
         <img src={props.image} alt='Cover' />
       </div>

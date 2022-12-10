@@ -14,11 +14,11 @@ type NotableSectionProps = {
 };
 const NotableSection = ({ hideButton, data }: NotableSectionProps) => {
   return (
-    <div className='notable-section p-4'>
+    <div className='notable-section'>
       <SectionHeader title='notable personalities' />
       <div className='cards'>
-        <div className='container-fluid layout'>
-          <div className='tw-grid tw-grid-cols-4 tw-gap-4'>
+        <div className='layout'>
+          <div className='gap-4 tw-grid tw-grid-cols-1 tw-gap-4 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
             {data.map((invite, index) => (
               <div className='tw-contents' key={index}>
                 <CardImgText
