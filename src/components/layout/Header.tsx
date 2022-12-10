@@ -4,6 +4,7 @@ import React from 'react';
 import { IoCloseSharp, IoMenuOutline } from 'react-icons/io5';
 const Header = () => {
   const [show, setShow] = React.useState(false);
+
   const links = [
     {
       name: 'Home',
@@ -120,28 +121,36 @@ const Header = () => {
     {
       name: 'English',
       flag: '/images/flags/english.svg',
+      code: 'en',
     },
     {
       name: 'Arabic',
       flag: '/images/flags/arabic.svg',
+      code: 'ar',
     },
     {
       name: 'French',
       flag: '/images/flags/french.svg',
+      code: 'fr',
     },
     {
       name: 'German',
       flag: '/images/flags/germany.svg',
+      code: 'de',
     },
     {
       name: 'Portuguese',
       flag: '/images/flags/portuguese.svg',
+      code: 'pt',
     },
     {
       name: 'Spanish',
       flag: '/images/flags/spain.svg',
+      code: 'es',
     },
   ];
+  const [lang, setLang] = React.useState(languages[0]);
+
   return (
     <div className='main-header tw-p-3 md:tw-px-8 md:tw-py-4'>
       <div className='md:container-fluid header-base'>
@@ -257,10 +266,10 @@ const Header = () => {
                             aria-expanded='false'
                           >
                             <span className='flag-icon tw-flex'>
-                              <img src='/images/flags/english.svg' alt='eng' />
+                              <img src={lang.flag} alt={lang.name} />
                             </span>
                             <span className='language-name tw-font-bold'>
-                              English
+                              {lang.name}
                             </span>
                           </button>
                           <ul
@@ -270,7 +279,12 @@ const Header = () => {
                           >
                             {languages.map((language) => (
                               <li key={language.name}>
-                                <button className='dropdown-item'>
+                                <button
+                                  onClick={() => {
+                                    setLang(language);
+                                  }}
+                                  className='dropdown-item'
+                                >
                                   <span className='flag-icon'>
                                     <img
                                       src={language.flag}
@@ -317,14 +331,19 @@ const Header = () => {
                 aria-expanded='false'
               >
                 <span className='flag-icon tw-flex'>
-                  <img src='/images/flags/english.svg' alt='eng' />
+                  <img src={lang.flag} alt={lang.name} />
                 </span>
-                <span className='language-name tw-font-bold'>English</span>
+                <span className='language-name tw-font-bold'>{lang.name}</span>
               </button>
               <ul className='dropdown-menu'>
                 {languages.map((language) => (
                   <li key={language.name}>
-                    <button className='dropdown-item'>
+                    <button
+                      onClick={() => {
+                        setLang(language);
+                      }}
+                      className='dropdown-item'
+                    >
                       <span className='flag-icon'>
                         <img src={language.flag} alt={language.name} />
                       </span>
