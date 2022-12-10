@@ -5,7 +5,7 @@ import CardIconText from '../card-icon-text/CardIconText';
 import SectionHeader from '../section-header/SectionHeader';
 const WhoAttending = () => {
   return (
-    <div className='who-attending-section tw-relative'>
+    <div className='who-attending-section tw-relative lg:tw-pt-20'>
       <div className='row layout'>
         <div className='col-lg-5 offset-lg-1 col-md-6'>
           <div className='content !tw-pr-0'>
