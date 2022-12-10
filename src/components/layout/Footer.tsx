@@ -40,13 +40,13 @@ const Footer = () => {
                       <h3 className='tw-hidden lg:tw-block'>&nbsp;</h3>
                       <ul>
                         <li>
-                          <Link href='/'>The Host</Link>
+                          <Link href='/the-host'>The Host</Link>
                         </li>
                         <li>
-                          <Link href='/'>Partners</Link>
+                          <Link href='/media-partners'>Partners</Link>
                         </li>
                         <li>
-                          <Link href='/'>The Summit</Link>
+                          <Link href='/about-summit'>The Summit</Link>
                         </li>
                       </ul>
                     </div>
@@ -54,13 +54,19 @@ const Footer = () => {
                       <h3>Who is attending</h3>
                       <ul>
                         <li>
-                          <Link href='/'>Captains of Industry</Link>
+                          <Link href='/captains-of-industry'>
+                            Captains of Industry
+                          </Link>
                         </li>
                         <li>
-                          <Link href='/'>Heads of State</Link>
+                          <Link href='/invited-heads-of-state'>
+                            Heads of State
+                          </Link>
                         </li>
                         <li>
-                          <Link href='/'>Notable Personalities</Link>
+                          <Link href='/invited-personalities'>
+                            Notable Personalities
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -68,13 +74,13 @@ const Footer = () => {
                       <h3>Resourses</h3>
                       <ul>
                         <li>
-                          <Link href='/'>News</Link>
+                          <Link href='/news'>News</Link>
                         </li>
                         <li>
-                          <Link href='/'>The AfCFTA</Link>
+                          <Link href='/the-afcfta'>The AfCFTA</Link>
                         </li>
                         <li>
-                          <Link href='/'>The AU Agenda 2063</Link>
+                          <Link href='/agenda'>The AU Agenda 2063</Link>
                         </li>
                       </ul>
                     </div>
@@ -82,20 +88,20 @@ const Footer = () => {
                       <h3>Event guide</h3>
                       <ul>
                         <li>
-                          <Link href='/'>Peduase</Link>
+                          <Link href='/peduase'>Peduase</Link>
                         </li>
                         <li>
-                          <Link href='/'>Accra</Link>
+                          <Link href='/accra'>Accra</Link>
                         </li>
                         <li>
-                          <Link href='/'>Protocols</Link>
+                          <Link href='/protocols'>Protocols</Link>
                         </li>
                       </ul>
                     </div>
                     <div className='footer-link-item m-0 no-title'>
                       <ul>
                         <li>
-                          <Link href='/'>Contact us</Link>
+                          <Link href='/help'>Contact us</Link>
                         </li>
                         <li>
                           <Link href='/'>Privacy policy</Link>
