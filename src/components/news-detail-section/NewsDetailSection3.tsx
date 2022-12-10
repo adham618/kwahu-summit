@@ -145,7 +145,7 @@ const NewsDetailSection3 = () => {
           <div className='video-section'>
             <VideoSection image='/images/video-bg2.png' videoID='2g811Eo7K8U' />
           </div>
-          <div className='layout tw-py-24'>
+          <div className='layout tw-py-10 lg:tw-py-24'>
             <GallerySection photos={photos} />
           </div>
         </div>

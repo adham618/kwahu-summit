@@ -12,13 +12,13 @@ const VideoSection = ({
 }) => {
   const [ShowVideoModal, setShowVideoModal] = React.useState(false);
   return (
-    <div className='video-section p-4'>
+    <div className='video-section lg:p-4'>
       <button
         onClick={() => setShowVideoModal(true)}
         className='video-box tw-border-none'
       >
         <img src={image} alt='video-bg' />
-        <span className='play-icon'>
+        <span className='play-icon !tw-h-[50px] !tw-w-[50px] sm:!tw-h-[100px] sm:!tw-w-[100px]'>
           <img src='/images/icons/play-icon.png' alt='play' />
         </span>
       </button>

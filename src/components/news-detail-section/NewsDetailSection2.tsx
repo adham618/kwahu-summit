@@ -196,7 +196,7 @@ const NewsDetailSection2 = () => {
               narrative and resources to accomplish more,” he declared.
             </p>
           </div>
-          <div className='layout tw-py-24'>
+          <div className='layout tw-py-10 lg:tw-py-24'>
             <GallerySection photos={photos} />
           </div>
           <div className='desc-card !tw-pl-0 md:!tw-pl-[120px]'>

@@ -117,7 +117,7 @@ export default function GalleryPage() {
             name='Gallery'
             desc='Kwahu Summit Launch'
           />
-          <div className='layout tw-py-24'>
+          <div className='layout tw-py-10 lg:tw-py-24'>
             <GallerySection photos={photos} />
           </div>
         </div>
