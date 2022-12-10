@@ -50,9 +50,13 @@ const HeroSection = () => {
             <div className='hero-content'>
               <div className='container'>
                 <div className='content'>
-                  <h3 className='titleCap'>{item.titleCap}</h3>
-                  <h3 className='title'>{item.title}</h3>
-                  <p className='desc tw-flex tw-items-center'>
+                  <h3 className='titleCap !tw-text-[40px] md:!tw-text-[54px]'>
+                    {item.titleCap}
+                  </h3>
+                  <h3 className='title !tw-text-[40px] md:!tw-text-[54px]'>
+                    {item.title}
+                  </h3>
+                  <p className='desc tw-flex tw-items-center !tw-text-[16px] md:!tw-text-[19px]'>
                     {item.desc}
                     <span className='tw-ml-2 tw-inline-block tw-h-0.5 tw-w-[515px] tw-bg-white'></span>
                   </p>
