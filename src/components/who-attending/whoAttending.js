@@ -7,7 +7,7 @@ const WhoAttending = () => {
   return (
     <div className='who-attending-section p-4 tw-relative'>
       <div className='container-fluid'>
-        <div className='row'>
+        <div className='row layout'>
           <div className='col-lg-5 offset-lg-1 col-md-6'>
             <div className='content'>
               <SectionHeader hint='The speakers' title='Who is attending' />

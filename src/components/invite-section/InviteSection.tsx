@@ -18,8 +18,8 @@ const InviteSection = ({ hideButton, data }: InviteSectionProps) => {
     <div className='invite-section p-4 tw-relative'>
       <SectionHeader title='Invited Heads of State' />
       <div className='cards'>
-        <div className='container-fluid'>
-          <div className='gap-4 tw-grid tw-grid-cols-4'>
+        <div className='container-fluid layout'>
+          <div className='gap-4 tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-4'>
             {data.map((invite, index) => (
               <div className='tw-contents' key={index}>
                 <CardImgText

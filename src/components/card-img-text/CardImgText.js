@@ -3,10 +3,10 @@ import React from 'react';
 
 const CardImgText = (props) => {
   return (
-    <div className='card-img-text tw-flex tw-flex-col'>
+    <div className='card-img-text tw-mx-auto tw-flex tw-max-w-[300px] tw-flex-col'>
       <div className='cover'>
         <img
-          className='tw-h-[422.23px] tw-w-[320.46px]'
+          className='tw-h-[422.23px] tw-w-[320.46px] tw-object-fill'
           src={props.image}
           alt={props.name}
         />
