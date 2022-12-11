@@ -188,7 +188,8 @@ const Header = () => {
 
     isFallback || addScript();
 
-    events.on('routeChangeStart', removeScript);
+    events.on('routeChangeStart', addScript);
+
     events.on('routeChangeComplete', addScript);
 
     return () => {
