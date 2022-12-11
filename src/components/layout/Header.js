@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { IoCloseSharp, IoMenuOutline } from 'react-icons/io5';
+
 const Header = () => {
   const [show, setShow] = React.useState(false);
 
@@ -149,8 +151,63 @@ const Header = () => {
       code: 'es',
     },
   ];
-  const [lang, setLang] = React.useState(languages[0]);
 
+  const [lang, setLang] = React.useState(languages[0]);
+  const { isFallback, events } = useRouter();
+
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      { pageLanguage: 'en', includedLanguages: 'en,ar,fr,de,pt,es' },
+      'google_translate_element'
+    );
+  };
+
+  React.useEffect(() => {
+    const id = 'google-translate-script';
+
+    const addScript = () => {
+      const s = document.createElement('script');
+      s.setAttribute(
+        'src',
+        '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+      );
+      s.setAttribute('id', id);
+      const q = document.getElementById(id);
+      if (!q) {
+        document.body.appendChild(s);
+        window.googleTranslateElementInit = googleTranslateElementInit;
+      }
+    };
+
+    const removeScript = () => {
+      const q = document.getElementById(id);
+      if (q) q.remove();
+      const w = document.getElementById('google_translate_element');
+      if (w) w.innerHTML = '';
+    };
+
+    isFallback || addScript();
+
+    events.on('routeChangeStart', removeScript);
+    events.on('routeChangeComplete', addScript);
+
+    return () => {
+      events.off('routeChangeStart', removeScript);
+      events.off('routeChangeComplete', addScript);
+    };
+  }, [events, isFallback]);
+  React.useEffect(() => {
+    const flags = document.getElementsByClassName('flag_link');
+
+    Array.prototype.forEach.call(flags, function (e) {
+      e.addEventListener('click', function () {
+        const lang = e.getAttribute('data-lang');
+        const languageSelect = document.querySelector('select.goog-te-combo');
+        languageSelect.value = lang;
+        languageSelect?.dispatchEvent(new Event('change'));
+      });
+    });
+  }, []);
   return (
     <div className='main-header tw-p-3 md:tw-px-8 md:tw-py-4'>
       <div className='md:container-fluid header-base'>
@@ -258,7 +315,10 @@ const Header = () => {
                     </div>
                     <div className='tw-w-full tw-p-3 md:tw-px-8 md:tw-py-4'>
                       <div className='pt-3 tw-flex tw-justify-between tw-border-0 tw-border-t-2 tw-border-solid tw-border-white'>
-                        <div className='language-dropdown dropdown'>
+                        <div
+                          id='google_translate_element'
+                          className='language-dropdown  dropdown'
+                        >
                           <button
                             className='btn text-white btn-flat dropdown-toggle'
                             type='button'
@@ -323,7 +383,10 @@ const Header = () => {
             <p>January 26th - 28th 2023</p>
           </div>
           <div className='header-top-right d-flex align-items-center'>
-            <div className='language-dropdown dropdown'>
+            <div
+              id='google_translate_element'
+              className='language-dropdown dropdown'
+            >
               <button
                 className='btn text-white btn-flat dropdown-toggle'
                 type='button'
@@ -335,14 +398,16 @@ const Header = () => {
                 </span>
                 <span className='language-name tw-font-bold'>{lang.name}</span>
               </button>
-              <ul className='dropdown-menu'>
+
+              <ul className='dropdown-menu translation-links'>
                 {languages.map((language) => (
                   <li key={language.name}>
                     <button
                       onClick={() => {
                         setLang(language);
                       }}
-                      className='dropdown-item'
+                      className='dropdown-item flag_link'
+                      data-lang={language.code}
                     >
                       <span className='flag-icon'>
                         <img src={language.flag} alt={language.name} />
