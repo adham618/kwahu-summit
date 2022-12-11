@@ -335,7 +335,7 @@ const Header = () => {
                           <ul
                             className={`${
                               show ? 'tw-bottom-[50px] !tw-bg-white' : ''
-                            } dropdown-menu`}
+                            } dropdown-menu translation-links`}
                           >
                             {languages.map((language) => (
                               <li key={language.name}>
@@ -343,7 +343,8 @@ const Header = () => {
                                   onClick={() => {
                                     setLang(language);
                                   }}
-                                  className='dropdown-item'
+                                  className='dropdown-item flag_link'
+                                  data-lang={language.code}
                                 >
                                   <span className='flag-icon'>
                                     <img
